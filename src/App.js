@@ -1,15 +1,19 @@
-import { react, useEffect, useState } from "react";
+import { react, useEffect, useState, useCallback } from "react";
 import "./App.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Typed from "typed.js";
 import ScrollReveal from "scrollreveal";
 import VanillaTilt from "vanilla-tilt";
 import emailjs from "emailjs-com";
+import ParticlesBg from "particles-bg";
+// import { motion } from "framer-motion";
+// import { EarthCanvas } from "./assets/canvas/Earth.jsx";
+// import { slideIn } from "./utils/motion";
+
 import ClgImg from "./assets/images/educat/iiitlogo.jpg";
 import Profile from "./assets/images/Anurag-2.jpg";
 import Connect from "./assets/images/connect.jpg";
 import PortfolioIMG from "./assets/images/projects/portfolio.jpg";
-import AI_Calling from "./assets/images/projects/ai_calling.jpg";
 import Darwin from "./assets/images/projects/darwin.jpg";
 import LinkedinScraper from "./assets/images/projects/linkedin.jpg";
 import PhotoMate from "./assets/images/projects/photoCloud.jpg";
@@ -106,12 +110,12 @@ function App() {
       menu.classList.remove("fa-times");
       navbar.classList.remove("nav-toggle");
 
-      const scrollTopBtn = document.getElementById("scroll-top");
-      if (window.scrollY > 60) {
-        scrollTopBtn.classList.add("active");
-      } else {
-        scrollTopBtn.classList.remove("active");
-      }
+      // const scrollTopBtn = document.getElementById("scroll-top");
+      // if (window.scrollY > 60) {
+      //   scrollTopBtn.classList.add("active");
+      // } else {
+      //   scrollTopBtn.classList.remove("active");
+      // }
 
       document.querySelectorAll("section").forEach((section) => {
         const height = section.offsetHeight;
@@ -182,8 +186,8 @@ function App() {
         "frontend development",
         "backend development",
         "web designing",
-        "web development",
         "Genrative AI",
+        "web development",
       ],
       loop: true,
       typeSpeed: 50,
@@ -271,16 +275,16 @@ function App() {
               <a href="#about">About</a>
             </li>
             <li>
-              <a href="#skills">Skills</a>
-            </li>
-            <li>
               <a href="#education">Education</a>
             </li>
             <li>
-              <a href="#work">Work</a>
+              <a href="#experience">Experience</a>
             </li>
             <li>
-              <a href="#experience">Experience</a>
+              <a href="#skills">Skills</a>
+            </li>
+            <li>
+              <a href="#work">Projects</a>
             </li>
             <li>
               <a href="#contact">Contact</a>
@@ -289,96 +293,34 @@ function App() {
         </nav>
       </header>
       <section class="home" id="home">
+        {/* 
+      "color"
+"ball"
+"cobweb"
+"polygon"
+"square"
+*/}
+        <ParticlesBg type="cobweb" bg={true} />
+        <div className="image">
+          <img
+            draggable="false"
+            className="tilt"
+            src={Profile}
+            alt=""
+            style={{ height: "500px", maxHeight: "500px" }}
+          />
+        </div>
         <div class="content">
           <h2>
-            Hi There,
+            Hi,
             <br /> I'm Anurag{" "}
             <span style={{ color: "red", opacity: "0.7" }}>Singh</span>
           </h2>
           <p>
-            i am into <span className="typing_text"></span>
+          I’m passionate about <span className="typing_text"></span>
           </p>
-          <a href="#about" class="btn" style={{ backgroundColor: "green" }}>
-            <span>About Me</span>
-            <i class="fas fa-arrow-circle-down"></i>
-          </a>
           <div class="socials">
             <ul class="social-icons">
-              {/* <li>
-              <a
-                href="https://www.linkedin.com/in/anuragsingh922"
-                class="fab fa-linkedin"
-                aria-label="LinkedIn"
-                target="_blank"
-              ></a>
-              <a
-                href="https://github.com/anuragsingh922"
-                class="fab fa-github"
-                aria-label="GitHub"
-                target="_blank"
-              ></a>
-              <a
-                href="mailto:anuragjadu922@gmail.com"
-                class="fas fa-envelope"
-                aria-label="Mail"
-                target="_blank"
-              ></a>
-              <a
-                href="https://wa.me/9896424841"
-                class="fab fa-telegram-plane"
-                aria-label="Telegram"
-                target="_blank"
-              ></a>
-              </li>
-              <li>
-                <a
-                  class="github"
-                  aria-label="GitHub"
-                  href="https://github.com/jigar-sable"
-                  target="_blank"
-                >
-                  <i class="fab fa-github"></i>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="twitter"
-                  aria-label="Twitter"
-                  href="https://twitter.com/jigar_sable"
-                  target="_blank"
-                >
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="telegram"
-                  aria-label="Telegram"
-                  href="https://t.me/lifecode5"
-                  target="_blank"
-                >
-                  <i class="fab fa-telegram-plane"></i>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="instagram"
-                  aria-label="Instagram"
-                  href="https://www.instagram.com/jigarsable.dev"
-                >
-                  <i class="fab fa-instagram" target="_blank"></i>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="dev"
-                  aria-label="Dev"
-                  href="https://dev.to/jigarsable"
-                  target="_blank"
-                >
-                  <i class="fab fa-dev"></i>
-                </a>
-              </li> */}
               <a
                 href="https://www.linkedin.com/in/anuragsingh922"
                 class="fab fa-linkedin"
@@ -414,19 +356,10 @@ function App() {
             </ul>
           </div>
         </div>
-        <div className="image">
-          <img
-            draggable="false"
-            className="tilt"
-            src={Profile}
-            alt=""
-            style={{ height: "400px", maxHeight: "400px" }}
-          />
-        </div>
       </section>
-      <section class="about" id="about">
+      <section class="about" id="about" style={{ overflow: "hidden" }}>
         <h2 class="heading">
-          <i class="fas fa-user-alt"></i> About <span>Me</span>
+          <i class="fas fa-user-alt"></i> About <span style={{color:"yellow"}}>Me</span>
         </h2>
 
         <div class="row">
@@ -478,28 +411,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section class="skills" id="skills">
-        <h2 class="heading">
-          <i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span>
-        </h2>
-
-        <div className="container">
-          <div className="row" id="skillsContainer">
-            {skills.map((item, index) => (
-              <div
-                className="bar"
-                key={index}
-                style={{ backgroundColor: "lightgrey", color: "black" }}
-              >
-                <div className="info">
-                  <img src={item.icon} alt={item.name} />
-                  <span>{item.name}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div class="education_exp">
       <section class="education" id="education">
         <h1 class="heading">
           <i class="fas fa-graduation-cap"></i> My <span>Education</span>
@@ -535,175 +447,14 @@ function App() {
           </div>
         </div>
       </section>
-      <section class="work" id="work">
-        <h2 class="heading">
-          <i class="fas fa-laptop-code"></i> Projects <span>Made</span>
-        </h2>
-
-        <div class="box-container">
-          <div class="box tilt">
-            <img draggable="false" src={PortfolioIMG} alt="" />
-            <div class="content">
-              <div class="tag">
-                <h3>Portfolio Website</h3>
-              </div>
-              <div class="desc">
-                <p>
-                  Personal portfolio website. Don't need much info about it,
-                  just scroll down. You're here only!
-                </p>
-                <div class="btns">
-                  <a href="#home" class="btn" target="_blank">
-                    <i class="fas fa-eye"></i> View
-                  </a>
-                  <a
-                    href="https://github.com/anuragsingh922/portfolio-frontend"
-                    class="btn"
-                    target="_blank"
-                  >
-                    Code <i class="fas fa-code"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="box tilt">
-            <img draggable="false" src={PhotoMate} alt="" />
-            <div class="content">
-              <div class="tag">
-                <h3>
-                  PhotoCloud - A MERN-Based Photo Storage and Management
-                  Application
-                </h3>
-              </div>
-              <div class="desc">
-                <p>
-                  Developed a web
-                  application similar to Google Photos, utilizing the MERN stack
-                  (MongoDB, Express.js, React.js, and Node.js).
-                  MongoDB is used as the backend database to efficiently handle
-                  large volumes of image data and metadata, ensuring seamless
-                  performance and scalability. 
-                </p>
-                <div class="btns">
-                  <a
-                    href="https://github.com/anuragsingh922/photos-frontend"
-                    class="btn"
-                    target="_blank"
-                  >
-                    Code <i class="fas fa-code"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="box tilt">
-            <img draggable="false" src={LinkedinScraper} alt="" />
-            <div class="content">
-              <div class="tag">
-                <h3>LinkedIn Scraper - Automated Targeted Networking Tool</h3>
-              </div>
-              <div class="desc">
-                <p>
-                  Developed a LinkedIn scraper using the MERN stack (MongoDB,
-                  Express.js, React.js, and Node.js) designed to streamline the
-                  process of finding and connecting with potential targets. The
-                  application allows users to select a job title and location to
-                  identify companies with available job openings. It then
-                  locates employees at those companies and automates the process
-                  of sending connection requests with personalized notes.
-                  Additionally, users can choose to send emails directly to the
-                  employees if desired, enhancing networking efficiency and
-                  outreach.
-                </p>
-                <div class="btns">
-                  <a
-                    href="https://linkedin-scraper.netlify.app/"
-                    class="btn"
-                    target="_blank"
-                  >
-                    Code <i class="fas fa-code"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="box tilt">
-            <img draggable="false" src={Darwin} alt="" />
-            <div class="content">
-              <div class="tag">
-                <h3>Darwin - AI Software Engineering Intern</h3>
-              </div>
-              <div class="desc">
-                <p>
-                  Associated with Accintia As part of my
-                  ongoing role at Accintia, I have been developing Darwin, an
-                  AI-powered Software Engineering Intern designed to assist
-                  developers with complex tasks. Leveraging large language
-                  models (LLMs), Darwin is capable of understanding intricate
-                  human commands, breaking them down into actionable steps,
-                  conducting thorough research, and generating high-quality code
-                  across multiple programming languages. Key Features: Code
-                  Comprehension: Understands and navigates complex codebases and
-                  software architectures. Efficient Problem-Solving: Skilled in
-                  managing changes, updates, and bug fixes within software
-                  projects. Research & Innovation: Conducts in-depth research
-                  and participates in brainstorming sessions to generate
-                  innovative ideas. Multi-Language Coding: Proficient in writing
-                  code in various programming languages. Real-Time Debugging:
-                  Executes and debugs code, utilizing online resources similarly
-                  to a human software engineer. Development Roadmap: GitHub
-                  Issue Resolution: Enhancing capabilities to track, manage, and
-                  resolve GitHub issues efficiently. Model Pipeline
-                  Construction: Developing features to create and optimize
-                  machine learning model pipelines. Model Training: Implementing
-                  functionalities for training models with diverse datasets to
-                  improve accuracy and performance. Inspired by AI engineers
-                  like Devin and Devika, Darwin aims to evolve into a fully
-                  competent SDE/ML/AI Engineer. This project is an ongoing
-                  effort within Accintia, reflecting my continued contributions
-                  to the company's innovation and development.
-                </p>
-                <div class="btns">
-                  <a
-                    href="https://github.com/Cognation/darwin"
-                    class="btn"
-                    target="_blank"
-                  >
-                    Code <i class="fas fa-code"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* 
-        <div class="viewall">
-          <a href="/projects" class="btn">
-            <span>View All</span>
-            <i class="fas fa-arrow-right"></i>
-          </a>
-        </div> */}
-      </section>
       <section class="experience" id="experience">
         <h2 class="heading">
-          <i class="fas fa-briefcase"></i> Experience{" "}
+          <i class="fas fa-briefcase"></i> E
+          <span style={{ color: "blue" }}>xp</span>
+          <span style={{ color: "black" }}>erience</span>{" "}
         </h2>
 
         <div class="timeline">
-          {/* <div class="container right">
-            <div class="content">
-              <div class="tag">
-                <h2>Self Employed</h2>
-              </div>
-              <div class="desc">
-                <h3>Full Stack Developer</h3>
-                <p>Oct 2021 - present</p>
-              </div>
-            </div>
-          </div> */}
-
           <div class="container right">
             <div class="content">
               <div class="tag">
@@ -748,14 +499,205 @@ function App() {
           </a>
         </div> */}
       </section>
+      <section class="skills" id="skills">
+        <h2 class="heading">
+          <i class="fas fa-laptop-code" style={{color:"black"}}></i>{" "}
+          <span style={{ color: "aqua" }}>Skills &</span> <span>Abilities</span>
+        </h2>
+
+        <div className="container">
+          <div className="row" id="skillsContainer">
+            {skills.map((item, index) => (
+              <div
+                className="bar"
+                key={index}
+                style={{ backgroundColor: "lightgrey", color: "black" }}
+              >
+                <div className="info">
+                  <img src={item.icon} alt={item.name} />
+                  <span>{item.name}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      </div>
+      <section class="work" id="work">
+        <h2 class="heading">
+          <i class="fas fa-laptop-code"></i> Projects <span>Made</span>
+        </h2>
+
+        <div class="box-container">
+          <div class="box tilt">
+            <img draggable="false" src={PortfolioIMG} alt="" />
+            <div class="content">
+              <div class="tag">
+                <h3>Portfolio Website</h3>
+              </div>
+              <div class="desc">
+                <p>
+                  Personal portfolio website. Don't need much info about it,
+                  just scroll down. You're here only!
+                </p>
+                <div class="btns">
+                  <a href="#home" class="btn" target="_blank">
+                    <i class="fas fa-eye"></i> View
+                  </a>
+                  <a
+                    href="https://github.com/anuragsingh922/portfolio"
+                    class="btn"
+                    target="_blank"
+                  >
+                    Code <i class="fas fa-code"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box tilt">
+            <img draggable="false" src={PhotoMate} alt="" />
+            <div class="content">
+              <div class="tag">
+                <h3>
+                  PhotoCloud - A MERN-Based Photo Storage and Management
+                  Application
+                </h3>
+              </div>
+              <div class="desc">
+                <p>
+                  Developed a web application similar to Google Photos,
+                  utilizing the MERN stack (MongoDB, Express.js, React.js, and
+                  Node.js). MongoDB is used as the backend database to
+                  efficiently handle large volumes of image data and metadata,
+                  ensuring seamless performance and scalability.
+                </p>
+                <div class="btns">
+                  <a
+                    href="https://github.com/anuragsingh922/photos-frontend"
+                    class="btn"
+                    target="_blank"
+                  >
+                    Code <i class="fas fa-code"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box tilt">
+            <img draggable="false" src={LinkedinScraper} alt="" />
+            <div class="content">
+              <div class="tag">
+                <h3>LinkedIn Scraper - Automated Targeted Networking Tool</h3>
+              </div>
+              <div class="desc">
+                <p>
+                  Developed a LinkedIn scraper using the MERN stack (MongoDB,
+                  Express.js, React.js, and Node.js) designed to streamline the
+                  process of finding and connecting with potential targets. The
+                  application allows users to select a job title and location to
+                  identify companies with available job openings. It then
+                  locates employees at those companies and automates the process
+                  of sending connection requests with personalized notes.
+                  Additionally, users can choose to send emails directly to the
+                  employees if desired, enhancing networking efficiency and
+                  outreach.
+                </p>
+                <div class="btns">
+                  <a
+                    href="https://github.com/anuragsingh922/linkedin-scraper-frontend"
+                    class="btn"
+                    target="_blank"
+                  >
+                    Code <i class="fas fa-code"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box tilt">
+            <img draggable="false" src={Darwin} alt="" />
+            <div class="content">
+              <div class="tag">
+                <h3>Darwin - AI Software Engineering Intern</h3>
+              </div>
+              <div class="desc">
+                <p>
+                  Associated with Accintia As part of my ongoing role at
+                  Accintia, I have been developing Darwin, an AI-powered
+                  Software Engineering Intern designed to assist developers with
+                  complex tasks. Leveraging large language models (LLMs), Darwin
+                  is capable of understanding intricate human commands, breaking
+                  them down into actionable steps, conducting thorough research,
+                  and generating high-quality code across multiple programming
+                  languages. Key Features: Code Comprehension: Understands and
+                  navigates complex codebases and software architectures.
+                  Efficient Problem-Solving: Skilled in managing changes,
+                  updates, and bug fixes within software projects. Research &
+                  Innovation: Conducts in-depth research and participates in
+                  brainstorming sessions to generate innovative ideas.
+                  Multi-Language Coding: Proficient in writing code in various
+                  programming languages. Real-Time Debugging: Executes and
+                  debugs code, utilizing online resources similarly to a human
+                  software engineer. Development Roadmap: GitHub Issue
+                  Resolution: Enhancing capabilities to track, manage, and
+                  resolve GitHub issues efficiently. Model Pipeline
+                  Construction: Developing features to create and optimize
+                  machine learning model pipelines. Model Training: Implementing
+                  functionalities for training models with diverse datasets to
+                  improve accuracy and performance. Inspired by AI engineers
+                  like Devin and Devika, Darwin aims to evolve into a fully
+                  competent SDE/ML/AI Engineer. This project is an ongoing
+                  effort within Accintia, reflecting my continued contributions
+                  to the company's innovation and development.
+                </p>
+                <div class="btns">
+                  <a
+                    href="https://github.com/Cognation/darwin"
+                    class="btn"
+                    target="_blank"
+                  >
+                    Code <i class="fas fa-code"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 
+        <div class="viewall">
+          <a href="/projects" class="btn">
+            <span>View All</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div> */}
+      </section>
+
       <section class="contact" id="contact">
         <h2 class="heading">
-          <i class="fas fa-headset"></i> Get in <span>Touch</span>
+          <i class="fas fa-headset"></i>{" "}
+          <span style={{ color: "white" }}>Get in</span>{" "}
+          <span style={{ color: "yellow" }}>Touch</span>
         </h2>
 
         <div class="container">
           <div class="content">
+            {/* <div class="image-box">
+              <img
+              draggable="false"
+              src={Connect}
+              alt=""
+              style={{ borderRadius: "10px", width: "85%" }}
+              />
+            </div> */}
             <div class="image-box">
+              {/* <motion.div
+                variants={slideIn("right", "tween", 0.2, 1)}
+                style={{width:"400px" , height : "400px"}}
+              >
+                <EarthCanvas />
+              </motion.div> */}
               <img
                 draggable="false"
                 src={Connect}
@@ -763,6 +705,7 @@ function App() {
                 style={{ borderRadius: "10px", width: "85%" }}
               />
             </div>
+
             <form id="contact-form" onSubmit={handleSubmit}>
               <div class="form-group">
                 <div class="field">
@@ -868,12 +811,12 @@ function App() {
           </div>
         </div>
       </section>
-      <a
+      {/* <a
         href="#home"
         aria-label="ScrollTop"
         className="fas fa-angle-up"
         id="scroll-top"
-      ></a>
+      ></a> */}
     </>
   );
 }
