@@ -399,7 +399,7 @@ function App() {
 
             <div class="resumebtn">
               <a
-                href="https://drive.google.com/file/d/1PBRu_rqSYLoRIJPbWURkcukkzQG_X32m/view"
+                href="https://drive.google.com/file/d/1JPpsOLqJm0XM3fG2_ikYYv7tVB5AhH-3/view?usp=drive_link"
                 target="_blank"
                 class="btn"
                 style={{ backgroundColor: "green" }}
