@@ -254,9 +254,9 @@ header .navbar ul li a:hover {
 }
 
 .home .image img {
-  width: 70%;
+  width: 60%;
   margin-left: 6rem;
-  border-radius: 10%;
+  border-radius: 5%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
@@ -278,14 +278,14 @@ header .navbar ul li a:hover {
 }
 
 .home .content p {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: #000;
   font-weight: 600;
   padding: 1rem 0;
 }
 
 .home .content p span {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: rgb(148, 8, 8);
   font-weight: 600;
   padding: 1rem 0;
@@ -336,7 +336,7 @@ header .navbar ul li a:hover {
   list-style: none;
   position: fixed;
   right: 0;
-  top: 1%;
+  top: 1.3%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -403,15 +403,16 @@ header .navbar ul li a:hover {
   }
 
   .home .image img {
-    margin-top: -12rem;
+    margin-top: 10rem;
+    display: none;
   }
 
   .home .content p {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
   }
 
   .home .content p span {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -421,7 +422,7 @@ header .navbar ul li a:hover {
 /* about section starts */
 .about {
   /* background: rgb(255, 255, 255); */
-  background: url('./assets/images/background/about_bg.jpg');
+  background-color: rgba(188, 188, 188, 0.927);
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: darken;

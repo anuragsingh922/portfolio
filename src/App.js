@@ -12,6 +12,7 @@ import ParticlesBg from "particles-bg";
 
 import ClgImg from "./assets/images/educat/iiitlogo.jpg";
 import Profile from "./assets/images/Anurag-2.jpg";
+import Banner from "./assets/images/banner.png";
 import Connect from "./assets/images/connect.jpg";
 import PortfolioIMG from "./assets/images/projects/portfolio.jpg";
 import Darwin from "./assets/images/projects/darwin.jpg";
