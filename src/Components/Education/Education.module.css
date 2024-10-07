@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
+
+/* Common Styles */
+.educationExp {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+/* Education Section Styles */
+.education {
+  padding: 3rem 0;
+  min-height: fit-content;
+  background-color: #f7f9fc;
+}
+
+.education .heading {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.education .heading span {
+  color: #007bff;
+}
+
+.education .quote {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.education .citation {
+  font-style: italic;
+  color: #555;
+}
+
+.education .boxContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.education .box {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  margin-top: 2rem;
+  overflow: hidden;
+  transition: 0.3s;
+  background: #fff;
+}
+
+.education .box:hover {
+  transform: scale(1.03);
+  box-shadow: 1rem 0.5rem 1.2rem rgba(0, 0, 0, 0.3);
+}
+
+.education .box .image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.education .box .image img {
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.education .box .content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  flex: 2;
+  text-align: left;
+}
+
+.education .content h3 {
+  font-size: 2rem;
+  color: #012970;
+  margin-bottom: 0.5rem;
+}
+
+.education .content p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.education h4 {
+  font-size: 1.5rem;
+  color: #226d00;
+  margin-top: 1rem;
+}
+
+/* Education Media Queries */
+@media screen and (max-width: 600px) {
+  .education .box {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .education .box .image {
+    width: 100%;
+    height: 25rem;
+  }
+
+  .education .box .content {
+    flex: 1;
+  }
+}

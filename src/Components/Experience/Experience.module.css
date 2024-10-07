@@ -1,0 +1,106 @@
+
+/* Experience Section Styles */
+.experience {
+    padding: 4rem 0;
+    background-color: #eaf3ff;
+  }
+  
+  .experience .heading {
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+  
+  .experience .primaryColor {
+    color: #007bff;
+  }
+  
+  .experience .secondaryColor {
+    color: #333;
+  }
+  
+  /* Timeline Container */
+  .experience .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+  
+  /* Experience Card Styles */
+  .experience .container {
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+    max-width: 900px;
+    padding: 1.5rem 2rem;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .experience .container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .experience .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .experience .tag h2 {
+    font-size: 1.8rem;
+    color: #007bff;
+    font-weight: 600;
+  }
+  
+  .experience .desc h3 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .experience .desc p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  /* Experience Media Queries */
+  @media screen and (max-width: 768px) {
+    .experience .container {
+      width: 90%;
+      padding: 1.2rem 1.5rem;
+    }
+  
+    .experience .tag h2,
+    .experience .desc h3 {
+      font-size: 1.5rem;
+    }
+  
+    .experience .desc p {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .experience .container {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .experience .tag h2,
+    .experience .desc h3 {
+      text-align: center;
+    }
+  
+    .experience .desc p {
+      text-align: center;
+    }
+  }
