@@ -121,3 +121,7 @@
   background-color: black;
   cursor: pointer;
 }
+
+.allprojects:hover{
+  color: yellow;
+}

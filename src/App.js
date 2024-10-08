@@ -1,4 +1,3 @@
-import react from "react";
 import "./App.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Toaster } from "react-hot-toast";

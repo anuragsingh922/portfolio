@@ -1,9 +1,9 @@
 /* Container styling */
  .container {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     background: #f5f6fa;
-    font-family: 'Poppins', sans-serif;
   }
   
   /* Sidebar Styling */
@@ -70,11 +70,29 @@
     padding: 40px;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
+    font-size: 15px;
   }
   
   .detailsTitle {
     font-size: 2.2em;
     margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0px 10px 20px #000000;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .website{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 500;
+    text-decoration: solid;
+    gap: 10px;
+    margin: 10px 0px;
+  }
+
+  .website a{
+    color: blue;
   }
   
   .detailsDescription {
@@ -86,6 +104,13 @@
   .detailsContent {
     font-size: 1em;
     color: #5a5a73;
+  }
+
+  .videoURL{
+    width: 80%;
+    margin: 20px auto;
+    height: auto;
+    border-radius: 10px;
   }
   
   /* Responsive Styles */
