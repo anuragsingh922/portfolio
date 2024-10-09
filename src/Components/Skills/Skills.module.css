@@ -1,0 +1,106 @@
+/* skills section starts */
+.skills {
+  min-height: fit-content;
+}
+
+.skills h2 {
+  color: #333333; /* Softer black for better readability */
+  font-size: 2.5rem; /* Increased size for emphasis */
+  text-align: center; /* Center the heading */
+  margin-bottom: 1.5rem; /* Add spacing below the heading */
+  position: relative; /* For positioning the underline */
+}
+
+/* Highlighting the "Skills &" part */
+.skillsHighlight {
+  color: #ffcc00; /* Softer yellow */
+  font-weight: bold; /* Make the highlighted text bold */
+  margin-left: 10px;
+}
+
+/* Add an underline effect */
+.skills h2::after {
+  content: "";
+  display: block;
+  width: 50%; /* Width of the underline */
+  height: 4px; /* Height of the underline */
+  background: #ffcc00; /* Softer yellow for underline */
+  margin: 0.5rem auto; /* Center the underline */
+  border-radius: 2px; /* Rounded edges for the underline */
+}
+
+.skills .container {
+  background: rgba(191, 191, 191, 0.9); /* Light white background for contrast */
+  color: #333333; /* Softer black text color */
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+.skills .container .row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  flex-wrap: wrap;
+  gap: 1.8rem;
+}
+
+.skills .container .bar {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  background: rgba(240, 240, 240, 0.9); /* Light gray for bars */
+  transition: 0.2s;
+}
+
+.skills .container .bar:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2) !important; /* Softer hover shadow */
+  background-color: rgb(228, 228, 228) !important; /* Slightly darker gray on hover */
+  transform: scale(1.1);
+}
+
+.skills .container .bar .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skills .container .bar .info i {
+  font-size: 4rem;
+  color: #007acc; /* Softer blue for icons */
+}
+
+.skills .container .bar .info span {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  margin-left: 0.5rem;
+}
+
+/* skills media queries starts */
+@media screen and (max-width: 600px) {
+  .skills .container {
+      padding: 0;
+      margin: 0;
+  }
+
+  .skills .container .row {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 1rem;
+      padding: 2rem 0.2rem;
+      gap: 1rem;
+  }
+
+  .skills .container {
+      margin-top: 5px;
+      width: 100%;
+  }
+}
+/* skills media queries ends */
+/* skills section ends */
