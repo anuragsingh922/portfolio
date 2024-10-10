@@ -122,8 +122,9 @@
   }
 
   .videoURL{
-    width: 80%;
+    width: 100%;
     margin: 20px auto;
+    min-height: 450px;
     height: auto;
     border-radius: 10px;
   }

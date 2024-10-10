@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./Projects.module.css";
-import { useNavigate } from "react-router-dom";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -10,7 +9,7 @@ const Projects = () => {
       id: 1,
       name: "Web AI Calling System",
       short: "WC",
-      videoURL: "https://youtu.be/FE1i8V7Sqgc",
+      videoURL: "https://www.youtube.com/embed/wafoPtnWngs",
       description: `The **Web AI Calling System** is a sophisticated, human-like communication platform that simulates real conversations using advanced AI technologies. It allows users to speak directly to the system via their microphone, and the AI listens, understands, and responds based on the context of the conversation. This system leverages the **MERN stack (MongoDB, Express, React, Node.js)** for a full-stack solution, ensuring a seamless and efficient interaction between the frontend and backend components.
 
 By utilizing **Deepgram's Speech-to-Text (STT)** on the server side, the system accurately transcribes user speech into text. This text is then processed using a **Large Language Model (LLM)** to generate appropriate responses based on the user's input. The response is converted back into audio using **Text-to-Speech (TTS)** technology and is played in the frontend, creating a real-time, dynamic conversation experience.`,
@@ -51,7 +50,7 @@ By utilizing **Deepgram's Speech-to-Text (STT)** on the server side, the system 
       website: "https://photocloud922.vercel.app",
       gitrepoF: "https://github.com/anuragsingh922/photos-frontend",
       gitrepoB: "https://github.com/anuragsingh922/photos-backend",
-      videoURL: "https://youtu.be/FE1i8V7Sqgc",
+      videoURL: "https://www.youtube.com/embed/0i8vqYf_5aE",
       description: `**PhotoCloud** is a robust, user-friendly platform that offers secure storage and streaming of media files. It allows users to upload, view, and manage their photos and videos with the confidence that their data is protected by industry-standard security measures. This system leverages the **MERN stack (MongoDB, Express, React, Node.js)** for a comprehensive full-stack solution, providing a seamless integration between the frontend and backend components.
 
 By utilizing **MongoDB's GridFS** for media storage, the system efficiently handles large photo and video files. The GridFS mechanism allows for real-time media streaming, ensuring that users can start viewing content as soon as the first portion of the file is received, without waiting for the entire file to load. This progressive loading technique creates a fast and engaging user experience.
@@ -93,8 +92,9 @@ The web app incorporates **JWT-based authentication** to ensure secure access an
       id: 3,
       name: "Darwin 🤖 - AI Software Engineer Intern",
       short: "DR",
-      gitrepo : "https://github.com/Cognation/darwin",
-      videoRef : "https://www.loom.com/share/25403d395ed7453998a08b780647acad?sid=64e16979-ae76-4dbc-8e07-3194b435f29f",
+      gitrepo: "https://github.com/Cognation/darwin",
+      videoRef:
+        "https://www.loom.com/share/25403d395ed7453998a08b780647acad?sid=64e16979-ae76-4dbc-8e07-3194b435f29f",
       description: `The **Darwin 🤖 - AI Software Engineer Intern** is a sophisticated platform designed for the training, testing, and deployment of deep learning models. It offers an intuitive interface for users to build, manage, and scale machine learning models with ease. This system leverages modern web technologies to provide a seamless and efficient interaction for machine learning enthusiasts and professionals alike.
 
 This project was developed during my internship at **Accintia**, where I served as the **Full Stack Lead**. In this role, I was responsible for designing and implementing the frontend interface, ensuring a smooth and engaging user experience. I also contributed to the backend by handling some simple Python tasks, collaborating with the team to integrate various services and functionalities.`,
@@ -137,7 +137,7 @@ This project was developed during my internship at **Accintia**, where I served 
       id: 4,
       name: "Vision GPT",
       short: "VG",
-      videoURL: "https://youtu.be/FE1i8V7Sqgc",
+      videoURL: "https://www.youtube.com/embed/nwU6Xcc5cS4",
       website: "https://vision-gpt-frontend.vercel.app/",
       gitrepoF: "https://github.com/anuragsingh922/visionGPT-frontend",
       gitrepoB: "https://github.com/anuragsingh922/visionGPT-backend",
@@ -180,7 +180,7 @@ Unlike traditional scraping mechanisms, this system leverages a unique approach 
       short: "WB",
       api: "https://webscraper-a392.onrender.com/internet",
       parameters: "query(String)",
-      videoURL: "https://youtu.be/FE1i8V7Sqgc",
+      videoURL: "https://www.youtube.com/embed/fAshTS5XYMY",
       description: `The **Web Content Scraping and Ranking API** is an advanced tool designed to scrape web content and rank URLs based on their relevance to a user-provided query. When a user provides a search term, such as "Taj Mahal," the API performs a Google search, scrapes the content from the top URLs, and ranks these URLs based on the importance of the information they contain. The API returns both the ranked URLs and the extracted content, making it an invaluable resource for applications that require context-aware web content retrieval and ranking.
 
 This project was developed using **Flask** and was hosted on **Render** to enable easy integration with any client or server-side application. The API can be used via platforms like Postman or integrated directly as an endpoint in applications.`,
@@ -254,13 +254,23 @@ This project was developed using **Flask** and was hosted on **Render** to enabl
       <div className={styles.detailsSection}>
         <h2 className={styles.detailsTitle}>{selectedProject.name}</h2>
         {selectedProject.videoURL && (
-          <video
-            src={selectedProject.videoURL}
-            controls
-            autoPlay
-            muted
+          // <video
+          //   src={selectedProject.videoURL}
+          //   controls
+          //   autoPlay
+          //   muted
+          //   className={styles.videoURL}
+          // ></video>
+
+          <iframe
             className={styles.videoURL}
-          ></video>
+            src={selectedProject.videoURL}
+            title="Web AI Calling"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+            style={{ border: 0 }}
+          ></iframe>
         )}
 
         {selectedProject.videoRef && (
