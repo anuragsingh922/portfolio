@@ -1,12 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ParticlesBg from "particles-bg";
 import css from "./Landing.module.css"; // Importing the CSS module
 import Profile from "../../assets/images/Anurag-2.jpg";
 import Typed from "typed.js";
 import VanillaTilt from "vanilla-tilt";
 import ScrollReveal from "scrollreveal";
+import bars from "../../assets/SVG/hamburg.svg";
 
 function Landing() {
+
+  const [istoggle , setstoggle] = useState(false);
   useEffect(() => {
     // Create a new Typed instance for typing animation
     const typed = new Typed(".typing_text", {
@@ -126,8 +129,16 @@ function Landing() {
         <a href="/" className={css.logo}>
           <span style={{ color: "green" }}>Anurag</span>
         </a>
-        <nav className={`${css.navbar} navbar`}>
-          <ul>
+
+        <div className={css.navMobile} onClick={()=>{
+          setstoggle((prv)=>!prv);
+        }}><img src={bars} alt="bars"></img></div>
+        {istoggle && <nav className={`${css.navbarr} navbar`}>
+
+          
+          <ul onClick={()=>{
+            setstoggle(false);
+          }}>
             <li>
               <a className={css.active} href="#home">
                 Home
@@ -152,20 +163,40 @@ function Landing() {
               <a href="#contact">Contact</a>
             </li>
           </ul>
-        </nav>
+        </nav>}
+
+        {!istoggle &&
+        <nav className={`${css.navbar} navbar`}>
+           <ul>
+            <li>
+              <a className={css.active} href="#home">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#education">Education</a>
+            </li>
+            <li>
+              <a href="#experience">Experience</a>
+            </li>
+            <li>
+              <a href="#skills">Skills</a>
+            </li>
+            <li>
+              <a href="#work">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+          </nav>}
       </header>
 
       <section className={css.home} id="home">
         <ParticlesBg type="cobweb" bg={true} />
-        <div className={css.image}>
-          <img
-            draggable="false"
-            className="tilt"
-            src={Profile}
-            alt=""
-            style={{ height: "500px", maxHeight: "500px" }}
-          />
-        </div>
         <div className={css.content}>
           <h2>
             Hi,

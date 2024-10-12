@@ -88,12 +88,81 @@ header .navbar ul li a:hover {
     display: none;
 }
 
+.navMobile{
+    display: none;
+}
+
+
+.navbarr{
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: toggle 1s forwards;
+    width: 100%;
+}
+
+.navbarr ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbarr li {
+    margin-left: 2.5rem;
+}
+
+.navbarr ul li a {
+    font-size: 1.57rem;
+    color: #2b3dda;
+    /* Consistent color */
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.04rem;
+    transition: 0.2s;
+}
+
+.navbarr ul li a.active,
+.navbarr ul li a:hover {
+    color: #fc8c05;
+    /* Amber hover state */
+    border-bottom: 0.2rem solid #fc8c05;
+    /* Match hover border */
+    padding: 0.5rem 0;
+}
+
+
+@keyframes toggle {
+    from{
+        height: 0vh;
+        width: 100%;;
+    }
+    to{
+        height: 100vh;
+        width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     #menu {
         display: block;
     }
+    .navMobile{
+        display: flex;
+        width: 100px;
+        height: 30px;
+    }
+    .navMobile img{
+        width: 100%;
+        height: 100%;
+    }
+    .navbar{
+        display: none;
+    }
 
-    header .navbar {
+    .navbarr {
         position: fixed;
         top: 6.5rem;
         right: -120%;
@@ -105,12 +174,12 @@ header .navbar ul li a:hover {
         /* Darker background for mobile nav */
     }
 
-    header .navbar ul {
+    .navbarr ul {
         flex-flow: column;
         padding: 1rem;
     }
 
-    header .navbar ul li {
+    .navbarr ul li {
         text-align: center;
         width: 100%;
         margin: 1rem 0;
@@ -118,7 +187,7 @@ header .navbar ul li a:hover {
         width: 26rem;
     }
 
-    header .navbar ul li a {
+    .navbarr ul li a {
         display: block;
         padding: 1rem;
         text-align: left;
@@ -127,8 +196,8 @@ header .navbar ul li a:hover {
         font-size: 2rem;
     }
 
-    header .navbar ul li a.active,
-    header .navbar ul li a:hover {
+    .navbarr ul li a.active,
+    .navbarr ul li a:hover {
         padding: 1rem;
         color: #fff;
         border-radius: 0.5rem;
@@ -140,7 +209,7 @@ header .navbar ul li a:hover {
         transform: rotate(180deg);
     }
 
-    header .navbar.nav-toggle {
+    .navbarr.nav-toggle {
         right: 0;
     }
 }
@@ -324,6 +393,15 @@ header .navbar ul li a:hover {
 
 /* social icons end */
 
+@media (max-width : 700px) {
+    .home .content h2{
+        font-size: 1.6rem;
+    }
+    .home .content h2 span{
+        font-size: 1.6rem;
+    }
+}
+
 /* hero media queries starts*/
 @media (max-width: 450px) {
     .home .btn {
@@ -340,7 +418,7 @@ header .navbar ul li a:hover {
     }
 
     .home .content p {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
 
     .home .content p span {

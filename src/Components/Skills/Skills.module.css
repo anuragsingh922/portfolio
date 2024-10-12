@@ -1,6 +1,12 @@
 /* skills section starts */
 .skills {
   min-height: fit-content;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
 }
 
 .skills h2 {
@@ -34,7 +40,8 @@
   color: #333333; /* Softer black text color */
   border-radius: 1rem;
   padding: 2rem;
-  width: 90%;
+  max-width: 90%;
+  overflow: scroll;
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 3rem;
@@ -42,10 +49,12 @@
 }
 
 .skills .container .row {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(6, 1fr);
   flex-wrap: wrap;
   gap: 1.8rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .skills .container .bar {
@@ -55,6 +64,8 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
   background: rgba(240, 240, 240, 0.9); /* Light gray for bars */
   transition: 0.2s;
+  width: 180px;
+  height: 120px;
 }
 
 .skills .container .bar:hover {
@@ -66,18 +77,14 @@
 .skills .container .bar .info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.skills .container .bar .info i {
-  font-size: 4rem;
-  color: #007acc; /* Softer blue for icons */
-}
-
 .skills .container .bar .info span {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
   margin-left: 0.5rem;
