@@ -8,8 +8,7 @@ import ScrollReveal from "scrollreveal";
 import bars from "../../assets/SVG/hamburg.svg";
 
 function Landing() {
-
-  const [istoggle , setstoggle] = useState(false);
+  const [istoggle, setstoggle] = useState(false);
   useEffect(() => {
     // Create a new Typed instance for typing animation
     const typed = new Typed(".typing_text", {
@@ -35,7 +34,7 @@ function Landing() {
   useEffect(() => {
     // Cache elements to avoid accessing them multiple times
     const menu = document.getElementById("menu");
-    const navbar = document.querySelector(".navbar");
+    const navbar = document.querySelector(".navba");
     const scrollTopBtn = document.getElementById("scroll-top");
 
     // Ensure elements are available before adding event listeners
@@ -43,7 +42,8 @@ function Landing() {
 
     // Function to handle menu click
     const handleMenuClick = () => {
-      if (menu && navbar) { // Check for elements again for safety
+      if (menu && navbar) {
+        // Check for elements again for safety
         menu.classList.toggle("fa-times");
         navbar.classList.toggle("nav-toggle");
       }
@@ -51,7 +51,8 @@ function Landing() {
 
     // Function to handle scroll and load events
     const handleScrollOrLoad = () => {
-      if (menu && navbar) { // Check for elements again
+      if (menu && navbar) {
+        // Check for elements again
         menu.classList.remove("fa-times");
         navbar.classList.remove("nav-toggle");
       }
@@ -76,9 +77,7 @@ function Landing() {
           document
             .querySelectorAll(".navbar ul li a")
             .forEach((link) => link.classList.remove("active"));
-          const activeLink = document.querySelector(
-            `.navbar a[href="#${id}"]`
-          );
+          const activeLink = document.querySelector(`.navbar a[href="#${id}"]`);
           activeLink?.classList.add("active");
         }
       });
@@ -130,69 +129,77 @@ function Landing() {
           <span style={{ color: "green" }}>Anurag</span>
         </a>
 
-        <div className={css.navMobile} onClick={()=>{
-          setstoggle((prv)=>!prv);
-        }}><img src={bars} alt="bars"></img></div>
-        {istoggle && <nav className={`${css.navbarr} navbar`}>
+        <div
+          className={css.navMobile}
+          onClick={() => {
+            setstoggle((prv) => !prv);
+          }}
+        >
+          <img src={bars} alt="bars"></img>
+        </div>
+        {istoggle && (
+          <nav className={`${css.navbarr} navba`}>
+            <ul
+              onClick={() => {
+                setstoggle(false);
+              }}
+            >
+              <li>
+                <a className={css.active} href="#home">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#education">Education</a>
+              </li>
+              <li>
+                <a href="#experience">Experience</a>
+              </li>
+              <li>
+                <a href="#skills">Skills</a>
+              </li>
+              <li>
+                <a href="#work">Projects</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        )}
 
-          
-          <ul onClick={()=>{
-            setstoggle(false);
-          }}>
-            <li>
-              <a className={css.active} href="#home">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#education">Education</a>
-            </li>
-            <li>
-              <a href="#experience">Experience</a>
-            </li>
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-            <li>
-              <a href="#work">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </nav>}
-
-        {!istoggle &&
-        <nav className={`${css.navbar} navbar`}>
-           <ul>
-            <li>
-              <a className={css.active} href="#home">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#education">Education</a>
-            </li>
-            <li>
-              <a href="#experience">Experience</a>
-            </li>
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-            <li>
-              <a href="#work">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-          </nav>}
+        {!istoggle && (
+          <nav className={`${css.navbar} navba`}>
+            <ul>
+              <li>
+                <a className={css.active} href="#home">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#education">Education</a>
+              </li>
+              <li>
+                <a href="#experience">Experience</a>
+              </li>
+              <li>
+                <a href="#skills">Skills</a>
+              </li>
+              <li>
+                <a href="#work">Projects</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        )}
       </header>
 
       <section className={css.home} id="home">
