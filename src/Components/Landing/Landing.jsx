@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ParticlesBg from "particles-bg";
 import css from "./Landing.module.css"; // Importing the CSS module
-import Profile from "../../assets/images/Anurag-2.jpg";
 import Typed from "typed.js";
 import VanillaTilt from "vanilla-tilt";
 import ScrollReveal from "scrollreveal";
@@ -126,7 +125,7 @@ function Landing() {
     <>
       <header className={css.header}>
         <a href="/" className={css.logo}>
-          <span style={{ color: "green" }}>Anurag</span>
+          <span>Anurag</span>
         </a>
 
         <div
@@ -218,25 +217,31 @@ function Landing() {
             <ul className={css.social_icons}>
               <a
                 href="https://www.linkedin.com/in/anuragsingh922"
-                className="fab fa-linkedin"
+                className={css.linkedin}
                 aria-label="LinkedIn"
                 target="_blank"
                 rel="noreferrer"
-              ></a>
+              >
+                <i className="fab fa-linkedin" target="_blank"></i>
+              </a>
               <a
                 href="https://github.com/anuragsingh922"
-                className="fab fa-github"
+                className={css.github}
                 aria-label="GitHub"
                 target="_blank"
                 rel="noreferrer"
-              ></a>
+              >
+                <i className="fab fa-github" target="_blank"></i>
+              </a>
               <a
                 href="mailto:anuragjadu922@gmail.com"
-                className="fas fa-envelope"
+                className={css.mail}
                 aria-label="Mail"
                 target="_blank"
                 rel="noreferrer"
-              ></a>
+              >
+                <i className="fas fa-envelope" target="_blank"></i>
+              </a>
               <a
                 className={css.instagram}
                 aria-label="Instagram"
@@ -248,11 +253,13 @@ function Landing() {
               </a>
               <a
                 href="https://wa.me/9896424841"
-                className="fab fa-telegram-plane"
+                className={css.whatsapp}
                 aria-label="Telegram"
                 target="_blank"
                 rel="noreferrer"
-              ></a>
+              >
+                <i className="fab fa-whatsapp" target="_blank"></i>
+              </a>
             </ul>
           </div>
         </div>

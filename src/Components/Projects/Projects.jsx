@@ -15,12 +15,10 @@ const Projects = () => {
     setSelectedProject(project);
     setshowsidebar(false);
     if (selectedProject && document.getElementById("title")) {
-      document
-        .getElementById("title")
-        .scrollTo({
-          top:0,
-          behavior:"smooth",
-        })
+      document.getElementById("title").scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
   };
   return (
@@ -48,9 +46,12 @@ const Projects = () => {
       </div>
 
       {selectedProject && (
-        <div className={`${styles.detailsSection} ${showsidebar && styles.hidee} `} id="title">
+        <div
+          className={`${styles.detailsSection} ${showsidebar && styles.hidee} `}
+          id="title"
+        >
           <h2 className={styles.detailsTitle} id="projectName">
-            {selectedProject.name}
+            {selectedProject?.name}
           </h2>
           {!showsidebar && (
             <img
@@ -64,10 +65,10 @@ const Projects = () => {
               }}
             />
           )}
-          {selectedProject.videoURL && (
+          {selectedProject?.videoURL && (
             <iframe
               className={styles.videoURL}
-              src={selectedProject.videoURL}
+              src={selectedProject?.videoURL}
               title="Web AI Calling"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
@@ -76,99 +77,116 @@ const Projects = () => {
             ></iframe>
           )}
 
-          {selectedProject.videoRef && (
+          {selectedProject?.videoRef && (
             <div className={`${styles.website}`}>
               <label htmlFor="website">Demo : </label>
               <a
-                href={selectedProject.videoRef}
+                href={selectedProject?.videoRef}
                 target="_blank"
                 rel="noreferrer"
               >
-                {selectedProject.videoRef}
+                {selectedProject?.videoRef}
               </a>
             </div>
           )}
-          {selectedProject.website && (
+          {selectedProject?.website && (
             <div className={`${styles.website}`}>
-              <label htmlFor="website">Website : </label>
+              <label htmlFor="website">
+                <strong>Website : </strong>
+              </label>
               <a
-                href={selectedProject.website}
+                href={selectedProject?.website}
                 target="_blank"
                 rel="noreferrer"
               >
-                {selectedProject.website}
+                {selectedProject?.website}
               </a>
             </div>
           )}
-          {selectedProject.gitrepo && (
+          {selectedProject?.mediumlink && selectedProject?.mediumText && (
+            <div className={`${styles.website}`}>
+              <a
+                href={selectedProject?.mediumlink}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {selectedProject?.mediumText}
+              </a>
+            </div>
+          )}
+          {selectedProject?.gitrepo && (
             <div className={`${styles.website}`}>
               <label htmlFor="repo">Repository : </label>
               <a
-                href={selectedProject.gitrepo}
+                href={selectedProject?.gitrepo}
                 target="_blank"
                 rel="noreferrer"
               >
-                {selectedProject.gitrepo}
+                {selectedProject?.gitrepo}
               </a>
             </div>
           )}
-          {selectedProject.gitrepoF && (
+          {selectedProject?.gitrepoF && (
             <div className={`${styles.website}`}>
               <label htmlFor="repo">Repository Frontend : </label>
               <a
-                href={selectedProject.gitrepoF}
+                href={selectedProject?.gitrepoF}
                 target="_blank"
                 rel="noreferrer"
               >
-                {selectedProject.gitrepoF}
+                {selectedProject?.gitrepoF}
               </a>
             </div>
           )}
-          {selectedProject.gitrepoB && (
+          {selectedProject?.gitrepoB && (
             <div className={`${styles.website}`}>
               <label htmlFor="repo">Repository Backend : </label>
               <a
-                href={selectedProject.gitrepoB}
+                href={selectedProject?.gitrepoB}
                 target="_blank"
                 rel="noreferrer"
               >
-                {selectedProject.gitrepoB}
+                {selectedProject?.gitrepoB}
               </a>
             </div>
           )}
           <p className={styles.detailsDescription}>
             <Markdown remarkPlugins={[remarkGfm]}>
-              {selectedProject.description}
+              {selectedProject?.description}
             </Markdown>
           </p>
 
-          {selectedProject.api && (
-            <div className={styles.api}>
-              <lable>api : {selectedProject.api}</lable>
-              <p> Parameters : 1. query (String)</p>
+          {selectedProject?.api && (
+            <div className={styles.api} style={{ overflow: "scroll" }}>
+              <lable>
+                <Markdown>{selectedProject?.api}</Markdown>
+              </lable>
+              <p>
+                <Markdown>{selectedProject?.parameters}</Markdown>
+              </p>
             </div>
           )}
           <div className={styles.detailsContent}>
             <h3 className={styles.highlight}>Features : </h3>
             <p>
               <Markdown remarkPlugins={[remarkGfm]}>
-                {selectedProject.features}
+                {selectedProject?.features}
               </Markdown>
             </p>
-            {selectedProject.technical && (
+            {selectedProject?.technical && (
               <>
                 <h3 className={styles.highlight}>
                   Technical Specifications :{" "}
                 </h3>
                 <p>
                   <Markdown remarkPlugins={[remarkGfm]}>
-                    {selectedProject.technical}
+                    {selectedProject?.technical}
                   </Markdown>
                 </p>
               </>
             )}
             <p className={styles.status}>
-              <strong>Status:</strong> {selectedProject.status}
+              <strong>Status:</strong> {selectedProject?.status}
             </p>
           </div>
         </div>

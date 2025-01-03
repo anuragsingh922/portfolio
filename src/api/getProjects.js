@@ -2,31 +2,32 @@ const projects = () => {
   const projects = [
     {
       id: 1,
-      name: "Web AI Calling System",
-      short: "WC",
+      name: "InteractIQ — Smart Web AI Interaction System ",
+      short: "IQ",
       videoURL: "https://www.youtube.com/embed/wafoPtnWngs",
-      description: `The **Web AI Calling System** is a sophisticated, human-like communication platform that simulates real conversations using advanced AI technologies. It allows users to speak directly to the system via their microphone, and the AI listens, understands, and responds based on the context of the conversation. This system leverages the **MERN stack (MongoDB, Express, React, Node.js)** for a full-stack solution, ensuring a seamless and efficient interaction between the frontend and backend components.
+      description: `The **InteractIQ** is a sophisticated, human-like communication platform that simulates real conversations using advanced AI technologies. It allows users to speak directly to the system via their microphone, and the AI listens, understands, and responds based on the context of the conversation. This system leverages the **MERN stack (MongoDB, Express, React, Node.js)** for a full-stack solution, ensuring a seamless and efficient interaction between the frontend and backend components.
   
   By utilizing **Deepgram's Speech-to-Text (STT)** on the server side, the system accurately transcribes user speech into text. This text is then processed using a **Large Language Model (LLM)** to generate appropriate responses based on the user's input. The response is converted back into audio using **Text-to-Speech (TTS)** technology and is played in the frontend, creating a real-time, dynamic conversation experience.`,
       features: `
   
-  - **1. Human-like Interruption Handling**:
+  - **1. Human-like Interruption Handling**
   
   The AI can detect and handle interruptions just like a real person. When the user speaks mid-conversation while the AI is responding, the system immediately halts its output to listen to the user's new query. This makes the interaction flow more naturally and provides a more engaging user experience.
   
-  - **2. Dynamic End-of-Speech (EoS) Detection**:
+  - **2. Dynamic End-of-Speech (EoS) Detection**
   
   Unlike typical AI systems that wait for extended silences before responding, the Web AI Calling System uses a novel Dynamic EoS mechanism. This feature intelligently predicts whether the user has completed their input, eliminating unnecessary delays and making responses quicker and more natural.
   
-  - **3. Flexible Topic Engagement**:  
+  - **3. Flexible Topic Engagement**  
   
   Users can direct the AI to converse on specific topics, making it possible to engage the AI on diverse subjects. This topic-specific interaction is especially useful for educational purposes, customer service applications, or focused discussions in professional settings.
   
-  - **4. Real-Time Query Processing and Response**:  
+  - **4. Real-Time Query Processing and Response**  
   
   The system uses asynchronous handling of both STT and LLM requests, ensuring quick response times. This architecture minimizes latency, allowing for smooth, uninterrupted conversations.
   
-  -  **5. WebSocket-Based Real-Time Communication**:  The system leverages WebSockets to establish persistent, real-time communication channels between the frontend and backend. This allows the AI to process and respond to user queries with minimal delay, enhancing the conversational flow. The WebSocket connection ensures that all audio and text data is transmitted seamlessly, enabling the AI to detect interruptions and changes in user input in real-time.
+  -  **5. WebSocket-Based Real-Time Communication**  
+The system leverages WebSockets to establish persistent, real-time communication channels between the frontend and backend. This allows the AI to process and respond to user queries with minimal delay, enhancing the conversational flow. The WebSocket connection ensures that all audio and text data is transmitted seamlessly, enabling the AI to detect interruptions and changes in user input in real-time.
   `,
       technical: `
   - **Frontend**:  React.js handles the user interface, capturing the user's audio and displaying the AI's responses in real-time.
@@ -95,23 +96,23 @@ const projects = () => {
   This project was developed during my internship at **Accintia**, where I served as the **Full Stack Lead**. In this role, I was responsible for designing and implementing the frontend interface, ensuring a smooth and engaging user experience. I also contributed to the backend by handling some simple Python tasks, collaborating with the team to integrate various services and functionalities.`,
       features: `
   
-  - **1. Intuitive Model Management**:
+  - **1. Intuitive Model Management**
   
   Darwin offers a user-friendly interface to create, edit, and manage machine learning models. The platform allows users to upload datasets, define model parameters, and track training progress in real-time.
   
-  - **2. GPU Acceleration Support**:
+  - **2. GPU Acceleration Support**
   
   Users can leverage GPU support to speed up the training process, significantly reducing the time required for model training and experimentation. The platform automatically detects and utilizes available GPU resources.
   
-  - **3. Advanced Hyperparameter Tuning**:
+  - **3. Advanced Hyperparameter Tuning**
   
   Darwin includes advanced tools for hyperparameter tuning, allowing users to optimize their models for the best performance. This feature includes automated searches, grid search, and random search capabilities.
   
-  - **4. Real-Time Training Visualization**:
+  - **4. Real-Time Training Visualization**
   
   The platform provides real-time visualizations of model training, including loss curves, accuracy metrics, and more, making it easier to understand model performance during the training process.
   
-  - **5. Model Deployment and Testing**:  
+  - **5. Model Deployment and Testing**  
   
   Darwin enables users to deploy trained models and perform testing on live data. The system provides endpoints for model inference, making it simple to integrate with other applications for production use.
   
@@ -173,31 +174,43 @@ const projects = () => {
       id: 5,
       name: "WebInsight",
       short: "WB",
-      api: "https://webscraper-a392.onrender.com/internet",
-      parameters: "query(String)",
+      api: "**API Endpoint :** https://webscraper-a392.onrender.com/internet",
+      parameters: `**Parameters** :
+
+Here is the JSON format for the data sent to the API in the body:
+
+
+\`\`\`json
+{
+  "query": "Taj Mahal"
+   // Replace "Taj Mahal" with the text you want to search for
+}
+  \`\`\`
+
+    `,
       videoURL: "https://www.youtube.com/embed/fAshTS5XYMY",
       description: `The **Web Content Scraping and Ranking API** is an advanced tool designed to scrape web content and rank URLs based on their relevance to a user-provided query. When a user provides a search term, such as "Taj Mahal," the API performs a Google search, scrapes the content from the top URLs, and ranks these URLs based on the importance of the information they contain. The API returns both the ranked URLs and the extracted content, making it an invaluable resource for applications that require context-aware web content retrieval and ranking.
   
   This project was developed using **Flask** and was hosted on **Render** to enable easy integration with any client or server-side application. The API can be used via platforms like Postman or integrated directly as an endpoint in applications.`,
       features: `
   
-  - **1. Query-Based Web Content Retrieval**:
+  - **1. Query-Based Web Content Retrieval**
   
   The API takes a user query as an input and performs a Google search to find the top 10 URLs. It then scrapes the content from these URLs and extracts relevant information to return the most useful content to the user.
   
-  - **2. Content Ranking Using BM25**:
+  - **2. Content Ranking Using BM25**
   
   The API uses the BM25 algorithm to rank the content based on relevance to the query. This ensures that the returned URLs and content snippets are highly relevant and contain the most informative data.
   
-  - **3. Real-Time Web Scraping**:
+  - **3. Real-Time Web Scraping**
   
   The system leverages multi-threading to perform web scraping in real-time, reducing the latency of content retrieval and improving response times.
   
-  - **4. Support for JSON Output**:
+  - **4. Support for JSON Output**
   
   The API outputs the ranked URLs and content in a structured JSON format, making it easy for other applications to consume and display the results.
   
-  - **5. Hosted on Render for Easy Access**:  
+  - **5. Hosted on Render for Easy Access** 
   
   The API is hosted on **Render**, making it publicly accessible and easy to integrate with various platforms and tools like Postman. Users can make POST requests to the API with the "query" parameter to get the desired results.
   
@@ -215,6 +228,111 @@ const projects = () => {
   
   `,
       status: "Completed",
+    },
+    {
+      id: 6,
+      name: "MailEase",
+      short: "ME",
+      api: `**API Endpoint :** https://send-mails-0lz7.onrender.com`,
+      mediumText: "Read the detailed article about MailEase on Medium",
+      mediumlink:
+        "https://medium.com/@anuragsingh922/send-emails-via-api-without-complex-integration-549fcedf897d",
+      parameters: `**Parameters** :
+
+Here is the JSON format for the data sent to the API in the body:
+
+\`\`\`json
+{
+  "toEmails": "recipient@example.com", // Replace with the recipient's email address
+  "companyName": "Your Company Name", // Replace with your company or personal name
+  "subject": "Test Email",
+  "textMessage": "Hello, this is a test message.",
+  "fromEmail": "your-email@gmail.com", // Replace with your email address
+  "fromPassword": "your-app-password" // Replace with the generated app password
+}
+\`\`\`
+`,
+      description: `The **MailEase** is a powerful tool designed to simplify the process of sending emails for developers. By leveraging **Nodemailer**, this API enables users to send emails quickly and effortlessly, eliminating the complexities of email integration. With a simple POST request, developers can implement email functionality in their applications, saving time and ensuring reliable communication. This project adheres to industry security standards, keeping your email credentials safe and secure, allowing you to focus on building great features without worrying about email delivery logistics.
+
+  This API can be integrated into any application stack, providing a versatile solution for sending emails for notifications, alerts, and user communications. Whether you're a seasoned developer or a student working on a project, MailEase empowers you to streamline email integration.`,
+      features: `
+  
+  - **1. Simplified Email Sending**
+  
+The API provides an intuitive interface to send emails with just a few lines of code, allowing developers to focus on their application logic rather than the complexities of email protocols.
+  
+  - **2. Built on Nodemailer**
+  
+Utilizing the **Nodemailer** library, the API supports sending emails via various transport options, including SMTP, and offers rich features like HTML content, attachments, and inline images.
+  
+  - **3. Secure Credentials Handling**
+  
+The API ensures that your email and app password remain confidential and secure, following best practices to prevent credential exploitation.
+  
+  - **4. JSON Output**
+  
+Responses are returned in structured JSON format, making it easy for developers to handle the output programmatically and integrate seamlessly with their applications.
+  
+  - **5. Ready for Quick Integration**  
+  
+With a simple API endpoint, developers can implement email functionality in minutes, greatly reducing the time spent on setup and configuration.
+  
+  - **6. Ideal for Students and Developers**  
+  
+Whether you are working on personal projects, academic assignments, or enterprise-level applications, MailEase provides a user-friendly solution for efficient email communication.
+  
+  `,
+      technical: `
+  - **Frontend**: The project does not require a traditional frontend, as it is designed for use with any client capable of making HTTP requests. Users can easily test the API using tools like Postman.
+
+  - **Backend**: Built on **Node.js** and **Express**, the backend utilizes **Nodemailer** to manage email sending. The API handles all necessary configurations and logic to facilitate the email delivery process.
+
+  - **Email Transport Options**: The API supports multiple transport options through Nodemailer, including SMTP, allowing it to send emails exclusively to Gmail accounts.
+
+  - **Security Measures**: Implemented security measures ensure that email credentials are never exposed. The API follows the best practices to safeguard sensitive information.
+
+  - **Deployment**: The API is hosted on **Render**, a cloud platform that provides a robust environment for running Node.js applications with minimal configuration.
+  
+  `,
+      status: "Completed",
+    },
+    {
+      id: 7,
+      name: "TourSync",
+      short: "TS",
+      website: "https://tour-sync-frontend.vercel.app/",
+      gitrepoF: "https://github.com/anuragsingh922/tourSync-frontend",
+      gitrepoB: "https://github.com/anuragsingh922/tourSync-backend",
+      // videoURL: "https://www.youtube.com/embed/your-demo-video-id",
+      description: "**TourSync** is a comprehensive travel platform designed to provide users with an intuitive and engaging experience for exploring and booking holiday packages. Developed as part of an internship assessment for Exploro Club, TourSync simplifies the process of discovering exciting trips, managing bookings, and making secure payments. The platform is powered by a modern tech stack, ensuring reliability and scalability while delivering a seamless user experience.",
+      features: `**User Features**  
+       - *Browse Trips* : Explore a variety of trips with detailed descriptions, pricing, itineraries, and images.  
+       - *Add to Cart* : Save selected trips for future booking or checkout.  
+       - *Secure Payments* : Leverage integrated payment gateways for a smooth and secure transaction process.  
+       - *Manage Booked Trips* : Access and review trip details, including cancellation options.  
+       - *Detailed Trip Information* : View comprehensive details about trips to make informed decisions.  
+       \n**Organizer Features**  
+       -  *Post Trips* : Create and list new trips with all necessary details.  
+       -  *Modify Trips* : Update trip information, including descriptions, images, and pricing.           
+       -  *Delete Trips* : Remove trips from the platform when no longer available.  
+       \n**Website Flow**:   
+       - *Landing Page* : A visually appealing overview of the platform, featuring available trips.  
+       - *Trips Page* : Explore, filter, and select trips based on category, destination, and date.  
+       - *Cart* : Review trips added to the cart before proceeding to checkout.  
+       - *My Bookings* : Manage and review all booked trips, with options for cancellations or modifications.`,
+      technical: `**Frontend**:  
+      - Built using **React.js** for dynamic and responsive user interfaces.  
+      - **Redux** for global state management.  
+      - **React Router** for seamless navigation and routing.  
+      - **Axios** for efficient API calls to the backend.  
+      - **Material-UI** for modern and consistent styling.  
+      - **Payment Gateway Integration** (e.g., Stripe) for secure online transactions.
+      \n**Backend**:  Developed with **Node.js** and **Express.js** for robust backend server capabilities.  
+      **Database**: MongoDB as the primary database for storing trip, user, and booking information.  
+      **Session Managment**: JWT Tokens for secure user authentication and session management.  
+      **Payment**: Payment Gateway API for handling payment processing and bookings.  
+`,
+      "status": "Completed"
     },
   ];
 

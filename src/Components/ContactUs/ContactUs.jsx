@@ -1,5 +1,5 @@
 import React from "react";
-import Connect from "../../assets/images/connect.jpg";
+import Connect from "../../assets/images/optimized/connect.webp";
 import emailjs from "emailjs-com";
 import css from "./ContactUs.module.css"; // Importing the CSS module
 

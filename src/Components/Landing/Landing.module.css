@@ -40,6 +40,21 @@ header .logo {
     /* Match the new theme */
 }
 
+header .logo span{
+    color: green;
+    animation: logoanimation 2s ease;
+}
+
+
+@keyframes logoanimation {
+    from{
+        color: #000;
+    }
+    to{
+        color: green;
+    }
+}
+
 header .logo i {
     font-size: 2.2rem;
 }
@@ -352,8 +367,8 @@ header .navbar ul li a:hover {
     font-size: 2rem;
     display: inline-block;
     line-height: 44px;
-    color: #00d9ff;
-    background-color: #09011b;
+    color: #00fb82;
+    background-color: rgb(0, 60, 138);
     width: 44px;
     height: 44px;
     text-align: center;
@@ -362,6 +377,16 @@ header .navbar ul li a:hover {
     -webkit-transition: all 0.2s linear;
     -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
+    animation: socialiconanimation 2s ease;
+}
+
+@keyframes socialiconanimation {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 .social_icons a:active,
@@ -389,6 +414,10 @@ header .navbar ul li a:hover {
 
 .social_icons a.instagram:hover {
     background-color: #ee00da;
+}
+
+.social_icons a.whatsapp:hover {
+    background-color: #00ee2c;
 }
 
 /* social icons end */

@@ -1,6 +1,5 @@
 import React from "react";
 import Darwin from "../../assets/images/projects/darwin.jpg";
-import LinkedinScraper from "../../assets/images/projects/linkedin.jpg";
 import PhotoMate from "../../assets/images/projects/photoCloud.jpg";
 import css from "./Work.module.css";
 import { useNavigate } from "react-router-dom";

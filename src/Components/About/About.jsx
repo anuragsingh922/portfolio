@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Profile from "../../assets/images/Anurag-2.jpg";
+import Profile from "../../assets/images/optimized/Anurag-2.webp";
 import css from "./About.module.css"; // Importing the CSS module
 import VanillaTilt from "vanilla-tilt";
 
