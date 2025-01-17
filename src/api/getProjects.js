@@ -334,6 +334,35 @@ Whether you are working on personal projects, academic assignments, or enterpris
 `,
       "status": "Completed"
     },
+    {
+      id: 8,
+      name: "ShopEase",
+      short: "SE",
+      website: "https://shopease922.vercel.app",
+      // videoURL: "https://www.youtube.com/embed/your-demo-video-id",
+      description: "**TourSync** is a comprehensive travel platform designed to provide users with an intuitive and engaging experience for exploring and booking holiday packages. Developed as part of an internship assessment for Exploro Club, TourSync simplifies the process of discovering exciting trips, managing bookings, and making secure payments. The platform is powered by a modern tech stack, ensuring reliability and scalability while delivering a seamless user experience.",
+      features: `**User Features**  
+       - *Browse Products* : Explore products with detailed descriptions, pricing, color, and images.   
+       - *Add to Cart* : Save selected trips for future booking or checkout.    
+       - *Add to Wishlist* : Save your favourite product for future booking or checkout.    
+       - *Detailed Product Information* : View comprehensive details about trips to make informed decisions.   
+       \n**Website Flow**:   
+       - *Landing Page* : A visually appealing overview of the platform, featuring available products.  
+       - *Cart* : Review your favourite products before proceeding to checkout.  
+       - *Wishlist* : Review products added to the cart before proceeding to checkout.  
+       - *Orders* : See all the orders made with all the datails status , price etc.`,
+      technical: `**Frontend**:  
+      - Built using **React.js** for dynamic and responsive user interfaces.  
+      - **Redux** for global state management.  
+      - **React Router** for seamless navigation and routing.  
+      - **Axios** for efficient API calls to the backend.  
+      - **Shadcn** for modern and consistent styling.  
+      \n**Backend**:  Developed with **Node.js** and **Express.js** for robust backend server capabilities.  
+      **Database**: MongoDB as the primary database for storing trip, user, and booking information.  
+      **Session Managment**: JWT Tokens for secure user authentication and session management.
+`,
+      "status": "Completed"
+    },
   ];
 
   return projects;
