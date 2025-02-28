@@ -2,7 +2,22 @@ import React from 'react';
 import ClgImg from "../../assets/images/educat/iiitlogo.jpg";
 import css from "./Education.module.css";
 
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+
 function Education() {
+
+
+  useGSAP(()=>{
+    gsap.from("#education" , {
+      opacity : 0,
+      y : 50,
+      scrollTrigger : {
+        start : "top 80%",
+        trigger : "#education",
+      }
+    })
+  })
   return (
       <section className={css.education} id="education">
         <h1 className={css.heading}>

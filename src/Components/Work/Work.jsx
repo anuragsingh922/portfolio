@@ -3,9 +3,24 @@ import Darwin from "../../assets/images/projects/darwin.jpg";
 import PhotoMate from "../../assets/images/projects/photoCloud.jpg";
 import css from "./Work.module.css";
 import { useNavigate } from "react-router-dom";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
 function Work() {
   const navigate = useNavigate();
+
+  useGSAP(() => {
+    gsap.from("#work", {
+      opacity: 0,
+      y: 50,
+      scrollTrigger: {
+        start: "top 80%",
+        trigger: "#work",
+        markers: process.env.markers,
+        stagger: 0.8,
+      },
+    });
+  });
   return (
     <section className={css.work} id="work">
       <h2 className={css.heading}>

@@ -1,7 +1,21 @@
 import React from 'react'
 import css from "./Experience.module.css";
 
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+
 function Experience() {
+
+  useGSAP(()=>{
+    gsap.from("#experience" , {
+      opacity : 0,
+      y : 50,
+      scrollTrigger : {
+        start : "top 80%",
+        trigger : "#experience",
+      }
+    })
+  })
   return (
     <section className={css.experience} id="experience">
         <h2 className={css.heading}>

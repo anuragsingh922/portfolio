@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types"; // Import PropTypes
 import css from "./Skills.module.css";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
 function Skills() {
   const skills = [
@@ -78,11 +80,25 @@ function Skills() {
     },
   ];
 
+  useGSAP(() => {
+    gsap.from("#skills", {
+      opacity: 0,
+      y: 50,
+      scrollTrigger: {
+        start: "top 80%",
+        trigger: "#skills",
+        markers: process.env.markers,
+        stagger: 0.8,
+      },
+    });
+  });
+
   return (
     <section className={css.skills} id="skills">
       <h2 className={css.heading}>
         <i className="fas fa-laptop-code" style={{ color: "black" }}></i>
-        <span className={css.skillsHighlight}>Skills &</span> <span>Abilities</span>
+        <span className={css.skillsHighlight}>Skills &</span>{" "}
+        <span>Abilities</span>
       </h2>
 
       <div className={css.container}>

@@ -36,9 +36,9 @@ const Projects = () => {
               }`}
               onClick={() => handleProjectClick(project)}
             >
-              <div className={styles.projectIcon}>
+              {/* <div className={styles.projectIcon}>
                 <span>{project.short}</span>
-              </div>
+              </div> */}
               <div className={styles.projectName}>{project.name}</div>
             </div>
           ))}

@@ -1,9 +1,22 @@
 import React from "react";
 import css from "./Footer.module.css"; // Importing CSS module
 
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+
 function Footer() {
+  useGSAP(() => {
+    gsap.from("#footer", {
+      opacity: 0,
+      y : 50,
+      scrollTrigger: {
+        start: "top 80%",
+        trigger: "#footer",
+      },
+    });
+  });
   return (
-    <section className={css.footer}>
+    <section className={css.footer} id="footer">
       <div className={css.boxContainer}>
         <div className={css.box}>
           <h3>Anurag's Portfolio</h3>
@@ -73,7 +86,7 @@ function Footer() {
         </div>
       </div>
       <div className={css.credit}>
-        <p>© 2023 Anurag Singh. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} Anurag Singh. All Rights Reserved.</p>
       </div>
     </section>
   );

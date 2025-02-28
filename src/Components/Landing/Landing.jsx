@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
 import ParticlesBg from "particles-bg";
-import css from "./Landing.module.css"; // Importing the CSS module
+import css from "./Landing.module.css";
 import Typed from "typed.js";
 import VanillaTilt from "vanilla-tilt";
 import ScrollReveal from "scrollreveal";
 import bars from "../../assets/SVG/hamburg.svg";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Landing() {
   const [istoggle, setstoggle] = useState(false);
@@ -21,7 +26,7 @@ function Landing() {
       loop: true,
       typeSpeed: 50,
       backSpeed: 25,
-      backDelay: 500,
+      backDelay: 2000,
     });
 
     // Cleanup the Typed instance on component unmount
@@ -121,10 +126,107 @@ function Landing() {
     };
   }, []);
 
+  useGSAP(() => {
+    const tlheader = gsap.timeline();
+
+    tlheader.from(
+      [
+        "#logoText",
+        "#hhome",
+        "#habout",
+        "#hedu",
+        "#hexp",
+        "#hskills",
+        "#hwork",
+        "#hcontact",
+      ],
+      {
+        y: -50,
+        opacity: 0,
+        stagger: 0.1,
+      }
+    );
+
+    gsap.from("#nameheading", {
+      x: -1000,
+      scale: 0,
+    });
+    gsap.from("#nametext", {
+      x: -1000,
+      delay : 0.6,
+      scale: 0,
+    });
+
+    const tl = gsap.timeline({ repeat: -1 });
+
+    tl.from(".hi", {
+      color: "black",
+      duration: 1,
+      stagger: 0.3,
+    });
+    tl.to(".hi", {
+      color: "orange",
+      duration: 1,
+      stagger: 0.3,
+    });
+
+    tl.to(".anuragname", {
+      color: "red",
+      duration: 3,
+      stagger: 0.3,
+    });
+
+    tl.to(".hi", {
+      color: "black",
+      duration: 1,
+      stagger: 0.3,
+    });
+    tl.to(".singh", {
+      color: "red",
+      opacity: 0.9,
+      duration: 1,
+      stagger: 0.3,
+    });
+    tl.to(".anuragname", {
+      color: "orange",
+      duration: 3,
+      stagger: 0.3,
+    });
+    tl.to(".singh", {
+      opacity: 0.8,
+      duration: 1,
+      stagger: 0.3,
+    });
+
+    const iconTimeline = gsap.timeline({ repeat: -1, duration: 2 });
+
+    iconTimeline.to(
+      ["#linkedicon", "#giticon", "#mailicon", "#instaicon", "#whatsappicon"],
+      {
+        color: "white",
+        stagger: 0.3,
+      }
+    );
+
+    iconTimeline.to(
+      ["#whatsappicon", "#instaicon", "#mailicon", "#giticon", "#linkedicon"],
+      {
+        color: "#00fb82",
+        stagger: 0.3,
+      }
+    );
+
+    return () => {
+      tl.kill();
+      tlheader.kill();
+      iconTimeline.kill();
+    };
+  });
+
   return (
-    <>
+    <div id="landing">
       <header className={css.header}>
-        <a href="/" className={css.logo}>
+        <a href="/" className={css.logo} id="logoText">
           <span>Anurag</span>
         </a>
 
@@ -173,27 +275,27 @@ function Landing() {
         {!istoggle && (
           <nav className={`${css.navbar} navba`}>
             <ul>
-              <li>
+              <li id="hhome">
                 <a className={css.active} href="#home">
                   Home
                 </a>
               </li>
-              <li>
+              <li id="habout">
                 <a href="#about">About</a>
               </li>
-              <li>
+              <li id="hedu">
                 <a href="#education">Education</a>
               </li>
-              <li>
+              <li id="hexp">
                 <a href="#experience">Experience</a>
               </li>
-              <li>
+              <li id="hskills">
                 <a href="#skills">Skills</a>
               </li>
-              <li>
+              <li id="hwork">
                 <a href="#work">Projects</a>
               </li>
-              <li>
+              <li id="hcontact">
                 <a href="#contact">Contact</a>
               </li>
             </ul>
@@ -204,12 +306,14 @@ function Landing() {
       <section className={css.home} id="home">
         <ParticlesBg type="cobweb" bg={true} />
         <div className={css.content}>
-          <h2>
-            Hi,
-            <br /> I'm Anurag{" "}
-            <span style={{ color: "red", opacity: "0.7" }}>Singh</span>
+          <h2 id="nameheading">
+            <span className="hi">Hi,</span>
+            <br /> <span className="anuragname"> I'm Anurag </span>{" "}
+            <span style={{ color: "red", opacity: "0.7" }} className="singh">
+              Singh
+            </span>
           </h2>
-          <p>
+          <p id="nametext">
             I’m passionate about{" "}
             <span className={`${css.typing_text} typing_text`}></span>{" "}
           </p>
@@ -221,6 +325,7 @@ function Landing() {
                 aria-label="LinkedIn"
                 target="_blank"
                 rel="noreferrer"
+                id="linkedicon"
               >
                 <i className="fab fa-linkedin" target="_blank"></i>
               </a>
@@ -230,6 +335,7 @@ function Landing() {
                 aria-label="GitHub"
                 target="_blank"
                 rel="noreferrer"
+                id="giticon"
               >
                 <i className="fab fa-github" target="_blank"></i>
               </a>
@@ -239,6 +345,7 @@ function Landing() {
                 aria-label="Mail"
                 target="_blank"
                 rel="noreferrer"
+                id="mailicon"
               >
                 <i className="fas fa-envelope" target="_blank"></i>
               </a>
@@ -248,6 +355,7 @@ function Landing() {
                 href="https://www.instagram.com/anuragsingh922"
                 target="_blank"
                 rel="noreferrer"
+                id="instaicon"
               >
                 <i className="fab fa-instagram" target="_blank"></i>
               </a>
@@ -257,6 +365,7 @@ function Landing() {
                 aria-label="Telegram"
                 target="_blank"
                 rel="noreferrer"
+                id="whatsappicon"
               >
                 <i className="fab fa-whatsapp" target="_blank"></i>
               </a>
@@ -264,7 +373,7 @@ function Landing() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

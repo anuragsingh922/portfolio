@@ -3,7 +3,21 @@ import Connect from "../../assets/images/optimized/connect.webp";
 import emailjs from "emailjs-com";
 import css from "./ContactUs.module.css"; // Importing the CSS module
 
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+
 function ContactUs() {
+
+  useGSAP(()=>{
+    gsap.from("#contact" , {
+      opacity : 0,
+      y : 50,
+      scrollTrigger : {
+        start : "top 80%",
+        trigger : "#contact",
+      }
+    })
+  })
   const handleSubmit = (e) => {
     e.preventDefault();
 
