@@ -103,6 +103,16 @@ const Projects = () => {
               </a>
             </div>
           )}
+          {selectedProject?.apk && (
+            <div className={`${styles.website}`}>
+              <label htmlFor="apk">
+                <strong>APK : React Native</strong>
+              </label>
+              <a href={selectedProject?.apk} target="_blank" rel="noreferrer">
+                {selectedProject?.apk}
+              </a>
+            </div>
+          )}
           {selectedProject?.mediumlink && selectedProject?.mediumText && (
             <div className={`${styles.website}`}>
               <a

@@ -304,7 +304,8 @@ Whether you are working on personal projects, academic assignments, or enterpris
       gitrepoF: "https://github.com/anuragsingh922/tourSync-frontend",
       gitrepoB: "https://github.com/anuragsingh922/tourSync-backend",
       // videoURL: "https://www.youtube.com/embed/your-demo-video-id",
-      description: "**TourSync** is a comprehensive travel platform designed to provide users with an intuitive and engaging experience for exploring and booking holiday packages. Developed as part of an internship assessment for Exploro Club, TourSync simplifies the process of discovering exciting trips, managing bookings, and making secure payments. The platform is powered by a modern tech stack, ensuring reliability and scalability while delivering a seamless user experience.",
+      description:
+        "**TourSync** is a comprehensive travel platform designed to provide users with an intuitive and engaging experience for exploring and booking holiday packages. Developed as part of an internship assessment for Exploro Club, TourSync simplifies the process of discovering exciting trips, managing bookings, and making secure payments. The platform is powered by a modern tech stack, ensuring reliability and scalability while delivering a seamless user experience.",
       features: `**User Features**  
        - *Browse Trips* : Explore a variety of trips with detailed descriptions, pricing, itineraries, and images.  
        - *Add to Cart* : Save selected trips for future booking or checkout.  
@@ -332,7 +333,7 @@ Whether you are working on personal projects, academic assignments, or enterpris
       **Session Managment**: JWT Tokens for secure user authentication and session management.  
       **Payment**: Payment Gateway API for handling payment processing and bookings.  
 `,
-      "status": "Completed"
+      status: "Completed",
     },
     {
       id: 8,
@@ -340,7 +341,9 @@ Whether you are working on personal projects, academic assignments, or enterpris
       short: "SE",
       website: "https://shopease922.vercel.app",
       // videoURL: "https://www.youtube.com/embed/your-demo-video-id",
-      description: "**TourSync** is a comprehensive travel platform designed to provide users with an intuitive and engaging experience for exploring and booking holiday packages. Developed as part of an internship assessment for Exploro Club, TourSync simplifies the process of discovering exciting trips, managing bookings, and making secure payments. The platform is powered by a modern tech stack, ensuring reliability and scalability while delivering a seamless user experience.",
+      apk: "https://drive.google.com/file/d/1vQrYCJCYeZJIcH3nUSMl-dqam5xhK3gB/view?usp=sharing",
+      description:
+        "**TourSync** is a comprehensive travel platform designed to provide users with an intuitive and engaging experience for exploring and booking holiday packages. Developed as part of an internship assessment for Exploro Club, TourSync simplifies the process of discovering exciting trips, managing bookings, and making secure payments. The platform is powered by a modern tech stack, ensuring reliability and scalability while delivering a seamless user experience.",
       features: `**User Features**  
        - *Browse Products* : Explore products with detailed descriptions, pricing, color, and images.   
        - *Add to Cart* : Save selected trips for future booking or checkout.    
@@ -361,7 +364,7 @@ Whether you are working on personal projects, academic assignments, or enterpris
       **Database**: MongoDB as the primary database for storing trip, user, and booking information.  
       **Session Managment**: JWT Tokens for secure user authentication and session management.
 `,
-      "status": "Completed"
+      status: "Ongoing",
     },
   ];
 
