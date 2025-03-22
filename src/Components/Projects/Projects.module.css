@@ -12,11 +12,11 @@
 
 /* Sidebar Styling */
 .sidebar {
-  background: url("../../assets/images/background/projects_bg2.jpg") no-repeat center/cover;
+  background: url("../../assets/images/background/projects_bg2.jpg") no-repeat
+    center/cover;
   width: 30%;
   color: #ffffff;
   padding: 20px;
-  opacity: 0;
   animation: slide-in 1s forwards;
   max-height: 100vh;
   overflow-y: scroll;
@@ -30,6 +30,14 @@
   margin-bottom: 30px;
   text-align: center;
   color: yellow;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.arrow {
+  cursor: pointer;
 }
 
 .projectsList {
@@ -145,8 +153,6 @@
   margin-top: 20px;
 }
 
-
-
 .detailsSection::-webkit-scrollbar {
   width: 0.3rem;
 }
@@ -172,25 +178,25 @@
   .hide {
     position: absolute;
     left: 0;
-    transform: translateY(0);
+    transform: translateX(0);
     /* Initially, no translation */
     animation: slide-up 1s forwards;
     /* display: none; */
   }
 
-  .hidee{
-    display: none;
+  .hidee {
+    opacity: 0.8;
+    pointer-events: none;
   }
-
-
 
   .hamburg {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
+    margin-left: 10px;
     display: flex;
-    width: 5%;
-    height: 5%;
+    width: 7%;
+    height: 7%;
     opacity: 0;
     /* Start with opacity 0 */
     animation: fade-in 3s forwards;
@@ -198,8 +204,6 @@
   }
 
   /* Keyframes for fading in the opacity */
-  
-
 
   .sidebar {
     width: 100%;
@@ -215,35 +219,33 @@
   }
 }
 
-
 @keyframes slide-up {
   0% {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translateX(0);
+    /* opacity: 1; */
     /* Starting position */
   }
 
   100% {
-    transform: translateY(-100%);
-    opacity: 0;
+    transform: translateX(-100%);
+    /* opacity: 0; */
     /* Slide off the top */
   }
 }
 
 @keyframes slide-in {
   0% {
-    transform: translateY(-100%);
-    opacity: 0;
+    transform: translateX(-100%);
+    /* opacity: 0; */
     /* Starting position */
   }
 
   100% {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translateX(0);
+    /* opacity: 1; */
     /* Slide off the top */
   }
 }
-
 
 @keyframes fade-in {
   0% {

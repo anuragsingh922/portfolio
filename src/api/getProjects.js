@@ -41,51 +41,33 @@ The system leverages WebSockets to establish persistent, real-time communication
     },
     {
       id: 2,
-      name: "PhotoCloud",
-      short: "PC",
-      website: "https://photocloud922.vercel.app",
-      gitrepoF: "https://github.com/anuragsingh922/photos-frontend",
-      gitrepoB: "https://github.com/anuragsingh922/photos-backend",
-      videoURL: "https://www.youtube.com/embed/0i8vqYf_5aE",
-      description: `**PhotoCloud** is a robust, user-friendly platform that offers secure storage and streaming of media files. It allows users to upload, view, and manage their photos and videos with the confidence that their data is protected by industry-standard security measures. This system leverages the **MERN stack (MongoDB, Express, React, Node.js)** for a comprehensive full-stack solution, providing a seamless integration between the frontend and backend components.
-  
-  By utilizing **MongoDB's GridFS** for media storage, the system efficiently handles large photo and video files. The GridFS mechanism allows for real-time media streaming, ensuring that users can start viewing content as soon as the first portion of the file is received, without waiting for the entire file to load. This progressive loading technique creates a fast and engaging user experience.
-  
-  The web app incorporates **JWT-based authentication** to ensure secure access and **password hashing** to protect user credentials, bringing the security level on par with professional platforms. With **Tailwind CSS** for styling, the application offers a modern, responsive UI that adapts beautifully to all device types, providing users with an optimal experience whether they are on a desktop or a mobile device.
-  `,
-      features: `**1. Advanced Media Storage and Retrieval**  
-   The application utilizes MongoDB's GridFS to store photos and videos in the database, ensuring efficient storage and retrieval of large media files. This setup allows for quick access to files, regardless of size or format, making it ideal for managing extensive media libraries.
-  
-  **2. Secure User Authentication and Authorization**  
-   The web app implements secure authentication and authorization mechanisms using JWT (JSON Web Tokens). Passwords are hashed before storage to provide an additional layer of security, ensuring that user data is protected against unauthorized access. These features bring the application to a level of security comparable to that of professional websites.
-  
-  **3. Real-Time Media Streaming**  
-   Instead of waiting for the entire photo or video file to load from the server, users can start viewing as soon as a portion of the file is received. This is made possible through real-time streaming of media files, reducing wait times and offering a smooth playback experience. As images and videos progressively load, they become visible, providing a faster and more engaging user experience.
-  
-  **4. Responsive UI with Tailwind CSS**  
-   The user interface is built using Tailwind CSS, providing a sleek and modern design. Pages like the signup and login pages are fully responsive and adapt seamlessly across devices, ensuring an optimal experience whether users are on desktops, tablets, or smartphones.
-  
-  **5. Efficient Media Management**  
-   Users can upload, view, and delete photos and videos, with all interactions securely managed in the database. The application supports a range of media formats and offers smooth navigation between different media categories.
-  
-  **6. Scalable Architecture**  
-   The app is designed with a scalable architecture to handle increasing volumes of user data. The use of MongoDB's bucket storage enables efficient handling of file metadata, while Node.js ensures fast processing of requests, making it suitable for deployment in production environments.
-  `,
-      technical: `
-  - **Frontend** : The frontend is built with React.js and styled using Tailwind CSS. The responsive design provides a consistent and polished look, with smooth transitions and interactions.
-  
-  - **Backend** : Node.js and Express.js are used for backend processing. JWT is integrated for secure user authentication, while password hashing ensures that sensitive user information is stored securely.
-  
-  - **Database** : MongoDB's GridFS bucket is used for storing media files, ensuring efficient storage and retrieval of large photos and videos. This setup allows for partial retrieval and streaming of files, reducing load times.
-  
-  - **Media Streaming** : Media files are streamed in real-time as they are retrieved from the database. This feature enhances the user experience by allowing users to view images and videos progressively, without waiting for the entire file to be downloaded.
-  
-  - **Security** : User data is secured using industry-standard practices like password hashing and JWT-based authentication. Each API request is authenticated and authorized to prevent unauthorized access, ensuring that user media files remain secure.
-  `,
+      name: "ShopEase",
+      short: "SE",
+      website: "https://shopease922.vercel.app",
+      apk: "https://drive.google.com/file/d/1vQrYCJCYeZJIcH3nUSMl-dqam5xhK3gB/view?usp=sharing",
+      description:
+        "**ShopEase** is a modern e-commerce platform designed to provide users with a seamless online shopping experience. It allows users to browse a wide range of products, add items to their cart or wishlist, and securely complete their purchases. Built with a scalable tech stack, ShopEase ensures a smooth, fast, and secure shopping experience for all users.",
+      features:
+        "**User Features**\n - *Browse Products* : Explore products with detailed descriptions, pricing, colors, and images.\n - *Add to Cart* : Save selected products for future purchase or checkout.\n - *Add to Wishlist* : Save favorite products for easy access later.\n - *Secure Checkout* : Complete purchases safely with multiple payment options.\n - *Order Tracking* : View order status, tracking details, and purchase history.\n\n**Website Flow**:\n - *Landing Page* : A visually appealing homepage featuring trending and new products.\n - *Product Page* : Detailed product descriptions with pricing and customer reviews.\n - *Cart* : Review selected products before proceeding to checkout.\n - *Wishlist* : Save favorite products for future purchases.\n - *Orders* : View past and current orders with tracking information.",
+      technical:
+        "**Frontend**:\n - Built using **React.js** for a fast and responsive UI.\n - **Redux** for global state management.\n - **React Router** for smooth navigation.\n - **Axios** for efficient API communication.\n - **Tailwind CSS** or **Shadcn** for modern styling.\n\n**Backend**:\n - Developed using **Node.js** and **Express.js** for a scalable backend.\n - **MongoDB** as the primary database for storing user data, orders, and product details.\n - **JWT Authentication** for secure user sessions.\n - **Stripe / Razorpay Integration** for secure payments.\n\n**Deployment**:\n - **Frontend** hosted on **Vercel**.\n - **Backend** deployed on **Render / AWS / Digital Ocean**.",
       status: "Completed",
     },
     {
       id: 3,
+      name: "Ludo Game",
+      short: "LG",
+      apk: "https://drive.google.com/file/d/14cp5mz9kKZPTAJkXw_iKA_-5gnLmWU9D/view?usp=drive_link",
+      description:
+        "**Ludo** is a classic board game built using React Native, offering an engaging experience. Players roll dice, move their tokens, and aim to get all their pieces to the home area before their opponents. This digital version provides a smooth and interactive gameplay experience with a simple and user-friendly interface.",
+      features:
+        "**Game Features**\n  - *Smooth Animations* : Enjoy seamless and engaging gameplay with smooth transitions.\n - *Simple UI* : Clean and easy-to-use interface for all age groups.\n - *Dice Roll Mechanism* : Randomized dice rolls for fair gameplay.\n - *Basic Rules Implemented* : Standard Ludo rules, including safe zones and capturing opponent pieces.\n",
+      technical:
+        "**Tech Stack**\n - **Frontend**: Developed using **React Native** for cross-platform mobile support.\n - **State Management**: Utilizes **React Context API / Redux** for game state management.\n - **Navigation**: Implemented using **React Navigation**.\n - **Animations**: Smooth transitions with **React Native Reanimated**.\n - **Storage**: **AsyncStorage** and **MMKV** for local game data storage.\n",
+      status: "Completed",
+    },
+    {
+      id: 4,
       name: "Darwin 🤖 - AI Software Engineer Intern",
       short: "DR",
       gitrepo: "https://github.com/Cognation/darwin",
@@ -130,7 +112,91 @@ The system leverages WebSockets to establish persistent, real-time communication
       status: "Completed",
     },
     {
-      id: 4,
+      id: 5,
+      name: "TourSync",
+      short: "TS",
+      website: "https://tour-sync-frontend.vercel.app/",
+      gitrepoF: "https://github.com/anuragsingh922/tourSync-frontend",
+      gitrepoB: "https://github.com/anuragsingh922/tourSync-backend",
+      // videoURL: "https://www.youtube.com/embed/your-demo-video-id",
+      description:
+        "**TourSync** is a comprehensive travel platform designed to provide users with an intuitive and engaging experience for exploring and booking holiday packages. Developed as part of an internship assessment for Exploro Club, TourSync simplifies the process of discovering exciting trips, managing bookings, and making secure payments. The platform is powered by a modern tech stack, ensuring reliability and scalability while delivering a seamless user experience.",
+      features: `**User Features**  
+       - *Browse Trips* : Explore a variety of trips with detailed descriptions, pricing, itineraries, and images.  
+       - *Add to Cart* : Save selected trips for future booking or checkout.  
+       - *Secure Payments* : Leverage integrated payment gateways for a smooth and secure transaction process.  
+       - *Manage Booked Trips* : Access and review trip details, including cancellation options.  
+       - *Detailed Trip Information* : View comprehensive details about trips to make informed decisions.  
+       \n**Organizer Features**  
+       -  *Post Trips* : Create and list new trips with all necessary details.  
+       -  *Modify Trips* : Update trip information, including descriptions, images, and pricing.           
+       -  *Delete Trips* : Remove trips from the platform when no longer available.  
+       \n**Website Flow**:   
+       - *Landing Page* : A visually appealing overview of the platform, featuring available trips.  
+       - *Trips Page* : Explore, filter, and select trips based on category, destination, and date.  
+       - *Cart* : Review trips added to the cart before proceeding to checkout.  
+       - *My Bookings* : Manage and review all booked trips, with options for cancellations or modifications.`,
+      technical: `**Frontend**:  
+      - Built using **React.js** for dynamic and responsive user interfaces.  
+      - **Redux** for global state management.  
+      - **React Router** for seamless navigation and routing.  
+      - **Axios** for efficient API calls to the backend.  
+      - **Material-UI** for modern and consistent styling.  
+      - **Payment Gateway Integration** (e.g., Stripe) for secure online transactions.
+      \n**Backend**:  Developed with **Node.js** and **Express.js** for robust backend server capabilities.  
+      **Database**: MongoDB as the primary database for storing trip, user, and booking information.  
+      **Session Managment**: JWT Tokens for secure user authentication and session management.  
+      **Payment**: Payment Gateway API for handling payment processing and bookings.  
+`,
+      status: "Completed",
+    },
+    {
+      id: 6,
+      name: "PhotoCloud",
+      short: "PC",
+      website: "https://photocloud922.vercel.app",
+      gitrepoF: "https://github.com/anuragsingh922/photos-frontend",
+      gitrepoB: "https://github.com/anuragsingh922/photos-backend",
+      videoURL: "https://www.youtube.com/embed/0i8vqYf_5aE",
+      description: `**PhotoCloud** is a robust, user-friendly platform that offers secure storage and streaming of media files. It allows users to upload, view, and manage their photos and videos with the confidence that their data is protected by industry-standard security measures. This system leverages the **MERN stack (MongoDB, Express, React, Node.js)** for a comprehensive full-stack solution, providing a seamless integration between the frontend and backend components.
+  
+  By utilizing **MongoDB's GridFS** for media storage, the system efficiently handles large photo and video files. The GridFS mechanism allows for real-time media streaming, ensuring that users can start viewing content as soon as the first portion of the file is received, without waiting for the entire file to load. This progressive loading technique creates a fast and engaging user experience.
+  
+  The web app incorporates **JWT-based authentication** to ensure secure access and **password hashing** to protect user credentials, bringing the security level on par with professional platforms. With **Tailwind CSS** for styling, the application offers a modern, responsive UI that adapts beautifully to all device types, providing users with an optimal experience whether they are on a desktop or a mobile device.
+  `,
+      features: `**1. Advanced Media Storage and Retrieval**  
+   The application utilizes MongoDB's GridFS to store photos and videos in the database, ensuring efficient storage and retrieval of large media files. This setup allows for quick access to files, regardless of size or format, making it ideal for managing extensive media libraries.
+  
+  **2. Secure User Authentication and Authorization**  
+   The web app implements secure authentication and authorization mechanisms using JWT (JSON Web Tokens). Passwords are hashed before storage to provide an additional layer of security, ensuring that user data is protected against unauthorized access. These features bring the application to a level of security comparable to that of professional websites.
+  
+  **3. Real-Time Media Streaming**  
+   Instead of waiting for the entire photo or video file to load from the server, users can start viewing as soon as a portion of the file is received. This is made possible through real-time streaming of media files, reducing wait times and offering a smooth playback experience. As images and videos progressively load, they become visible, providing a faster and more engaging user experience.
+  
+  **4. Responsive UI with Tailwind CSS**  
+   The user interface is built using Tailwind CSS, providing a sleek and modern design. Pages like the signup and login pages are fully responsive and adapt seamlessly across devices, ensuring an optimal experience whether users are on desktops, tablets, or smartphones.
+  
+  **5. Efficient Media Management**  
+   Users can upload, view, and delete photos and videos, with all interactions securely managed in the database. The application supports a range of media formats and offers smooth navigation between different media categories.
+  
+  **6. Scalable Architecture**  
+   The app is designed with a scalable architecture to handle increasing volumes of user data. The use of MongoDB's bucket storage enables efficient handling of file metadata, while Node.js ensures fast processing of requests, making it suitable for deployment in production environments.
+  `,
+      technical: `
+  - **Frontend** : The frontend is built with React.js and styled using Tailwind CSS. The responsive design provides a consistent and polished look, with smooth transitions and interactions.
+  
+  - **Backend** : Node.js and Express.js are used for backend processing. JWT is integrated for secure user authentication, while password hashing ensures that sensitive user information is stored securely.
+  
+  - **Database** : MongoDB's GridFS bucket is used for storing media files, ensuring efficient storage and retrieval of large photos and videos. This setup allows for partial retrieval and streaming of files, reducing load times.
+  
+  - **Media Streaming** : Media files are streamed in real-time as they are retrieved from the database. This feature enhances the user experience by allowing users to view images and videos progressively, without waiting for the entire file to be downloaded.
+  
+  - **Security** : User data is secured using industry-standard practices like password hashing and JWT-based authentication. Each API request is authenticated and authorized to prevent unauthorized access, ensuring that user media files remain secure.
+  `,
+      status: "Completed",
+    },
+    {
+      id: 7,
       name: "Vision GPT",
       short: "VG",
       videoURL: "https://www.youtube.com/embed/nwU6Xcc5cS4",
@@ -171,7 +237,7 @@ The system leverages WebSockets to establish persistent, real-time communication
       status: "Completed",
     },
     {
-      id: 5,
+      id: 8,
       name: "WebInsight",
       short: "WB",
       api: "**API Endpoint :** https://webscraper-a392.onrender.com/internet",
@@ -230,7 +296,7 @@ Here is the JSON format for the data sent to the API in the body:
       status: "Completed",
     },
     {
-      id: 6,
+      id: 9,
       name: "MailEase",
       short: "ME",
       api: `**API Endpoint :** https://send-mails-0lz7.onrender.com`,
@@ -295,76 +361,6 @@ Whether you are working on personal projects, academic assignments, or enterpris
   
   `,
       status: "Completed",
-    },
-    {
-      id: 7,
-      name: "TourSync",
-      short: "TS",
-      website: "https://tour-sync-frontend.vercel.app/",
-      gitrepoF: "https://github.com/anuragsingh922/tourSync-frontend",
-      gitrepoB: "https://github.com/anuragsingh922/tourSync-backend",
-      // videoURL: "https://www.youtube.com/embed/your-demo-video-id",
-      description:
-        "**TourSync** is a comprehensive travel platform designed to provide users with an intuitive and engaging experience for exploring and booking holiday packages. Developed as part of an internship assessment for Exploro Club, TourSync simplifies the process of discovering exciting trips, managing bookings, and making secure payments. The platform is powered by a modern tech stack, ensuring reliability and scalability while delivering a seamless user experience.",
-      features: `**User Features**  
-       - *Browse Trips* : Explore a variety of trips with detailed descriptions, pricing, itineraries, and images.  
-       - *Add to Cart* : Save selected trips for future booking or checkout.  
-       - *Secure Payments* : Leverage integrated payment gateways for a smooth and secure transaction process.  
-       - *Manage Booked Trips* : Access and review trip details, including cancellation options.  
-       - *Detailed Trip Information* : View comprehensive details about trips to make informed decisions.  
-       \n**Organizer Features**  
-       -  *Post Trips* : Create and list new trips with all necessary details.  
-       -  *Modify Trips* : Update trip information, including descriptions, images, and pricing.           
-       -  *Delete Trips* : Remove trips from the platform when no longer available.  
-       \n**Website Flow**:   
-       - *Landing Page* : A visually appealing overview of the platform, featuring available trips.  
-       - *Trips Page* : Explore, filter, and select trips based on category, destination, and date.  
-       - *Cart* : Review trips added to the cart before proceeding to checkout.  
-       - *My Bookings* : Manage and review all booked trips, with options for cancellations or modifications.`,
-      technical: `**Frontend**:  
-      - Built using **React.js** for dynamic and responsive user interfaces.  
-      - **Redux** for global state management.  
-      - **React Router** for seamless navigation and routing.  
-      - **Axios** for efficient API calls to the backend.  
-      - **Material-UI** for modern and consistent styling.  
-      - **Payment Gateway Integration** (e.g., Stripe) for secure online transactions.
-      \n**Backend**:  Developed with **Node.js** and **Express.js** for robust backend server capabilities.  
-      **Database**: MongoDB as the primary database for storing trip, user, and booking information.  
-      **Session Managment**: JWT Tokens for secure user authentication and session management.  
-      **Payment**: Payment Gateway API for handling payment processing and bookings.  
-`,
-      status: "Completed",
-    },
-    {
-      id: 8,
-      name: "ShopEase",
-      short: "SE",
-      website: "https://shopease922.vercel.app",
-      // videoURL: "https://www.youtube.com/embed/your-demo-video-id",
-      apk: "https://drive.google.com/file/d/1vQrYCJCYeZJIcH3nUSMl-dqam5xhK3gB/view?usp=sharing",
-      description:
-        "**TourSync** is a comprehensive travel platform designed to provide users with an intuitive and engaging experience for exploring and booking holiday packages. Developed as part of an internship assessment for Exploro Club, TourSync simplifies the process of discovering exciting trips, managing bookings, and making secure payments. The platform is powered by a modern tech stack, ensuring reliability and scalability while delivering a seamless user experience.",
-      features: `**User Features**  
-       - *Browse Products* : Explore products with detailed descriptions, pricing, color, and images.   
-       - *Add to Cart* : Save selected trips for future booking or checkout.    
-       - *Add to Wishlist* : Save your favourite product for future booking or checkout.    
-       - *Detailed Product Information* : View comprehensive details about trips to make informed decisions.   
-       \n**Website Flow**:   
-       - *Landing Page* : A visually appealing overview of the platform, featuring available products.  
-       - *Cart* : Review your favourite products before proceeding to checkout.  
-       - *Wishlist* : Review products added to the cart before proceeding to checkout.  
-       - *Orders* : See all the orders made with all the datails status , price etc.`,
-      technical: `**Frontend**:  
-      - Built using **React.js** for dynamic and responsive user interfaces.  
-      - **Redux** for global state management.  
-      - **React Router** for seamless navigation and routing.  
-      - **Axios** for efficient API calls to the backend.  
-      - **Shadcn** for modern and consistent styling.  
-      \n**Backend**:  Developed with **Node.js** and **Express.js** for robust backend server capabilities.  
-      **Database**: MongoDB as the primary database for storing trip, user, and booking information.  
-      **Session Managment**: JWT Tokens for secure user authentication and session management.
-`,
-      status: "Ongoing",
     },
   ];
 

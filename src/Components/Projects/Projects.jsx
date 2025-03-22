@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./Projects.module.css";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import getprojects from "../../api/getProjects";
 import bars from "../../assets/SVG/hamburgDown.svg";
+import { ArrowLeft, List } from "lucide-react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Projects = () => {
+  const navigate = useNavigate();
   const projects = getprojects();
 
   const [selectedProject, setSelectedProject] = useState(projects[0]);
@@ -24,7 +27,10 @@ const Projects = () => {
   return (
     <div className={styles.container} id="heading">
       <div className={`${!showsidebar && styles.hide} ${styles.sidebar}`}>
-        <h2 className={styles.sidebarTitle}>Projects</h2>
+        <h2 className={styles.sidebarTitle} >
+          <ArrowLeft  onClick={() => navigate("/")} className={styles.arrow}/>
+          Projects
+        </h2>
         <div className={styles.projectsList}>
           {projects.map((project) => (
             <div
@@ -54,10 +60,18 @@ const Projects = () => {
             {selectedProject?.name}
           </h2>
           {!showsidebar && (
-            <img
-              src={bars}
+            // <img
+            //   src={bars}
+            //   className={styles.hamburg}
+            //   alt=""
+            //   onClick={() => {
+            //     setshowsidebar(true);
+            //     const head = document.getElementById("heading");
+            //     head.scrollIntoView({ behavior: "smooth" });
+            //   }}
+            // />
+            <List
               className={styles.hamburg}
-              alt=""
               onClick={() => {
                 setshowsidebar(true);
                 const head = document.getElementById("heading");
