@@ -10,40 +10,40 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 function About() {
-  useGSAP(() => {
-    gsap.from("#about", {
-      opacity: 0,
-      y: 50,
-      scrollTrigger: {
-        start: "top 80%",
-        trigger: "#about",
-        stagger: 0.8,
-      },
-    });
-    gsap.from("#name", {
-      opacity: 0,
-      y: -50,
-      delay: 0.6,
-      ease: "bounce.inOut",
-      scrollTrigger: {
-        start: "top 70%",
-        trigger: "#name",
-        stagger: 0.8,
-      },
-    });
+  // useGSAP(() => {
+  //   gsap.from("#about", {
+  //     opacity: 0,
+  //     y: 50,
+  //     scrollTrigger: {
+  //       start: "top 80%",
+  //       trigger: "#about",
+  //       stagger: 0.8,
+  //     },
+  //   });
+  //   gsap.from("#name", {
+  //     opacity: 0,
+  //     y: -50,
+  //     delay: 0.6,
+  //     ease: "bounce.inOut",
+  //     scrollTrigger: {
+  //       start: "top 70%",
+  //       trigger: "#name",
+  //       stagger: 0.8,
+  //     },
+  //   });
 
-    gsap.from("#resume" , {
-      x : 1000,
-      opacity : 0,
-      scale : 0,
-      duration : 1,
-      scrollTrigger : {
-        trigger : "#resume",
-        start : "top 100%",
-        end : "top 60%",
-      }
-    })
-  });
+  //   gsap.from("#resume" , {
+  //     x : 1000,
+  //     opacity : 0,
+  //     scale : 0,
+  //     duration : 1,
+  //     scrollTrigger : {
+  //       trigger : "#resume",
+  //       start : "top 100%",
+  //       end : "top 60%",
+  //     }
+  //   })
+  // });
 
   useEffect(() => {
     VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 15 });

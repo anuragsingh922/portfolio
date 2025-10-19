@@ -26,6 +26,7 @@ function Experience() {
 
         <div className={css.timeline}>
           {[
+            { company: 'Zame AI', role: 'SDE Intern | Internship', period: 'June 2025 - July 2025' },
             { company: 'IVY', role: 'Full Stack Web Developer | Internship', period: 'July 2024 - August 2024' },
             { company: 'AI Calls', role: 'Full Stack Web Developer | Part Time', period: 'Dec 2023 - Jan 2024' },
             { company: 'Accintia', role: 'Full Stack Web Developer | Internship', period: 'June 2023 - August 2024' },

@@ -29,6 +29,10 @@ function App() {
     );
   };
 
+  const initial = { scale: 0.8, opacity: 0.9 };
+  const inview = { scale: 1, opacity: 1 }
+  const motionDuration = { duration: 0.2 }
+
   return (
     <>
       <Toaster position="top-center" />
@@ -40,58 +44,58 @@ function App() {
               element={
                 <>
                   <motion.div
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    initial={{ scale: 0.7, opacity: 0.7 }}
-                    transition={{ duration: 0.4 }}
+                    whileInView={inview}
+                    initial={initial}
+                    transition={motionDuration}
                   >
                     <Landing />
                   </motion.div>
                   <motion.div
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    initial={{ scale: 0.7, opacity: 0.7 }}
-                    transition={{ duration: 0.4 }}
+                    whileInView={inview}
+                    initial={initial}
+                    transition={motionDuration}
                   >
                     <About />
                   </motion.div>
                   <motion.div
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    initial={{ scale: 0.7, opacity: 0.7 }}
-                    transition={{ duration: 0.4 }}
+                    whileInView={inview}
+                    initial={initial}
+                    transition={motionDuration}
                   >
                     <Education />
                   </motion.div>
                   <motion.div
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    initial={{ scale: 0.7, opacity: 0.7 }}
-                    transition={{ duration: 0.4 }}
+                    whileInView={inview}
+                    initial={initial}
+                    transition={motionDuration}
                   >
                     <Experience />
                   </motion.div>
                   <motion.div
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    initial={{ scale: 0.7, opacity: 0.7 }}
-                    transition={{ duration: 0.4 }}
+                    whileInView={inview}
+                    initial={initial}
+                    transition={motionDuration}
                   >
                     <Skills />
                   </motion.div>
                   <motion.div
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    initial={{ scale: 0.7, opacity: 0.7 }}
-                    transition={{ duration: 0.4 }}
+                    whileInView={inview}
+                    initial={initial}
+                    transition={motionDuration}
                   >
                     <Work />
                   </motion.div>
                   <motion.div
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    initial={{ scale: 0.7, opacity: 0.7 }}
-                    transition={{ duration: 0.4 }}
+                    whileInView={inview}
+                    initial={initial}
+                    transition={motionDuration}
                   >
                     <ContactUs />
                   </motion.div>
                   <motion.div
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    initial={{ scale: 0.7, opacity: 0.7 }}
-                    transition={{ duration: 0.4 }}
+                    whileInView={inview}
+                    initial={initial}
+                    transition={motionDuration}
                   >
                     <Footer />
                   </motion.div>
